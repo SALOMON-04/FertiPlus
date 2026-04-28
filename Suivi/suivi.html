@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/jpeg" href="../ressources/Total Protect (1).png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="suivi_style.css">
+    <title>Suivi</title>
+</head>
+
+<body>
+
+
+    <header>
+        <img src="../ressources//Total Protect (1).png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../Symptome/symptome.html">Symptome</a></li>
+                <li><a href="../Education/education.html">Education</a></li>
+                <li><a href="suivi.html">Suivi</a></li>
+                <li><a href="../consultation/consultation.html">Consultation</a></li>
+                <li><a href="">Compte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <section class="grande-section">
+
+        <section class="suivi">
+
+            <!-- Badge -->
+
+            <div class="badge-suivi">
+                <i class="fa-regular fa-calendar"></i>
+                <span>Suivi Personnalisé</span>
+            </div>
+
+            <!-- Titre -->
+
+            <h1>Prenez le contrôle de votre santé</h1>
+            <p>Suivez votre cycle, vos traitements et vos rendez-vous</p>
+
+            <!-- Onglets -->
+
+            <div class="onglets-suivi">
+                <button type="button" class="onglet-suivi actif-suivi" id="btn-cycle">
+                    <i class="fa-regular fa-heart"></i> Cycle
+                </button>
+                <button type="button" class="onglet-suivi" id="btn-rappels">
+                    <i class="fa-regular fa-bell"></i> Rappels
+                </button>
+                <button type="button" class="onglet-suivi" id="btn-sante">
+                    <i class="fa-solid fa-arrow-trend-up"></i> Santé
+                </button>
+            </div>
+
+        </section>
+
+        <div id="contenu-cycle">
+
+            <!-- Contenu Cycle -->
+
+            <div id="contenu-cycle">
+
+                <section class="cards-suivi">
+
+                    <div class="card-suivi">
+                        <span class="label">Prochaines règles</span>
+                        <span class="date violet">22 avr.</span>
+                        <span class="desc">Dans 2 jours</span>
+                    </div>
+
+                    <div class="card-suivi">
+                        <span class="label">Ovulation</span>
+                        <span class="date rose">8 avr.</span>
+                        <span class="desc">Période fertile</span>
+                    </div>
+
+                    <div class="card-suivi">
+                        <span class="label">Cycle moyen</span>
+                        <span class="date bleu">28 jours</span>
+                        <span class="desc">Régulier</span>
+                    </div>
+
+                </section>
+            </div>
+
+
+
+
+            <!--  parttie calandrier -->
+
+
+            <div class="calendrier">
+
+                <div class="entete">
+                    <h2>Calendrier du cycle</h2>
+                    <p>Visualisez votre cycle et vos périodes fertiles</p>
+                </div>
+
+                <div class="grille">
+
+                    <!-- Jours de la semaine -->
+                    <div class="jour-nom">Lun</div>
+                    <div class="jour-nom">Mar</div>
+                    <div class="jour-nom">Mer</div>
+                    <div class="jour-nom">Jeu</div>
+                    <div class="jour-nom">Ven</div>
+                    <div class="jour-nom">Sam</div>
+                    <div class="jour-nom">Dim</div>
+
+                    <!-- Jours -->
+                    <div class="cal-jour regles">25</div>
+                    <div class="cal-jour regles">26</div>
+                    <div class="cal-jour regles">27</div>
+                    <div class="cal-jour regles">28</div>
+                    <div class="cal-jour regles">29</div>
+                    <div class="cal-jour">30</div>
+                    <div class="cal-jour">31</div>
+
+                    <div class="cal-jour">1</div>
+                    <div class="cal-jour">2</div>
+                    <div class="cal-jour">3</div>
+                    <div class="cal-jour">4</div>
+                    <div class="cal-jour">5</div>
+                    <div class="cal-jour ovulation">6</div>
+                    <div class="cal-jour fertile">7</div>
+
+                    <div class="cal-jour regles">8</div>
+                    <div class="cal-jour regles">9</div>
+                    <div class="cal-jour regles">10</div>
+                    <div class="cal-jour">11</div>
+                    <div class="cal-jour">12</div>
+                    <div class="cal-jour">13</div>
+                    <div class="cal-jour">14</div>
+
+                    <div class="cal-jour">15</div>
+                    <div class="cal-jour">16</div>
+                    <div class="cal-jour">17</div>
+                    <div class="cal-jour">18</div>
+                    <div class="cal-jour">19</div>
+                    <div class="cal-jour aujourd-hui">20</div>
+                    <div class="cal-jour">21</div>
+
+                    <div class="cal-jour fertile">22</div>
+                    <div class="cal-jour">23</div>
+                    <div class="cal-jour">24</div>
+                    <div class="cal-jour">25</div>
+                    <div class="cal-jour">26</div>
+                    <div class="cal-jour">27</div>
+                    <div class="cal-jour">28</div>
+
+                </div>
+
+                <!-- Légende -->
+                <div class="legende">
+                    <div class="item">
+                        <div class="couleur regles"></div>
+                        <span>Règles</span>
+                    </div>
+                    <div class="item">
+                        <div class="couleur ovulation"></div>
+                        <span>Ovulation</span>
+                    </div>
+                    <div class="item">
+                        <div class="couleur fertile"></div>
+                        <span>Période fertile</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- strcuture de l'enregistrement du cycle mentruel -->
+
+
+            <div class="parametres">
+
+                <h2>Paramètres du cycle</h2>
+
+                <div class="groupe">
+                    <label for="date-regles">Date des dernières règles</label>
+                    <input type="date" id="date-regles" value="2026-03-25">
+                </div>
+
+                <div class="groupe">
+                    <label for="duree-cycle">Durée du cycle (jours)</label>
+                    <select id="duree-cycle">
+                        <option value="21">21 jours</option>
+                        <option value="22">22 jours</option>
+                        <option value="23">23 jours</option>
+                        <option value="24">24 jours</option>
+                        <option value="25">25 jours</option>
+                        <option value="26">26 jours</option>
+                        <option value="27">27 jours</option>
+                        <option value="28" selected>28 jours</option>
+                        <option value="29">29 jours</option>
+                        <option value="30">30 jours</option>
+                        <option value="31">31 jours</option>
+                        <option value="32">32 jours</option>
+                        <option value="33">33 jours</option>
+                        <option value="34">34 jours</option>
+                        <option value="35">35 jours</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn-enregistrer">Enregistrer</button>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- structure de rappel -->
+
+        <div id="contenu-rappels" style="display: none;">
+
+
+            <div class="rappels">
+
+                <div class="rappels-entete">
+                    <div>
+                        <h2>Mes rappels</h2>
+                        <p>Ne manquez plus aucun rendez-vous ou traitement</p>
+                    </div>
+                    <button type="button" class="btn-ajouter">+ Ajouter</button>
+                </div>
+
+                <div class="rappels-liste">
+
+                    <div class="rappel-item">
+                        <div class="rappel-gauche">
+                            <i class="fa-regular fa-calendar" style="color: #7c3aed;"></i>
+                            <div>
+                                <h3>Consultation gynécologique</h3>
+                                <span>15 avril 2026</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-supprimer">Supprimer</button>
+                    </div>
+
+                    <div class="rappel-item">
+                        <div class="rappel-gauche">
+                            <i class="fa-solid fa-capsules" style="color: #2563eb;"></i>
+                            <div>
+                                <h3>Prise de pilule</h3>
+                                <span>6 avril 2026</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-supprimer">Supprimer</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- la structure de la partie santé -->
+
+
+
+        <div id="contenu-sante" style="display: none;">
+
+            <div class="sante-grille">
+
+                <!-- Carte 1 : Suivi de fertilité -->
+
+                <div class="sante-card">
+                    <i class="fa-regular fa-face-smile" style="color: #7c3aed;"></i>
+                    <h3>Suivi de fertilité</h3>
+                    <p>Suivez votre ovulation et vos périodes fertiles</p>
+                    <button type="button" class="btn-sante-noir">Activer le suivi</button>
+                </div>
+
+                <!-- Carte 2 : Traitements -->
+
+                <div class="sante-card">
+                    <i class="fa-solid fa-capsules" style="color: #2563eb;"></i>
+                    <h3>Traitements</h3>
+                    <p>Gérez vos médicaments et traitements en cours</p>
+                    <button type="button" class="btn-sante-blanc">Gérer les traitements</button>
+                </div>
+
+                <!-- Carte 3 : Historique médical -->
+
+                <div class="sante-card">
+                    <i class="fa-solid fa-arrow-trend-up" style="color: #16a34a;"></i>
+                    <h3>Historique médical</h3>
+                    <p>Conservez vos résultats et examens</p>
+                    <button type="button" class="btn-sante-blanc">Voir l'historique</button>
+                </div>
+
+                <!-- Carte 4 : Symptômes -->
+
+                <div class="sante-card">
+                    <i class="fa-regular fa-heart" style="color: #ef4444;"></i>
+                    <h3>Symptômes</h3>
+                    <p>Notez vos symptômes quotidiens</p>
+                    <a href=""><button type="button" class="btn-sante-blanc">Ajouter des symptômes</button></a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <script src="../script/suivi.js"></script>
+
+</body>
+
+</html>
