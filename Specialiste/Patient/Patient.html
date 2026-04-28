@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="../../ressources/jpeg" href="../../ressources/Total Protect (1).png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="Patient.css">
+    <title>Mes patient</title>
+</head>
+
+<body>
+
+
+    <header>
+        <img src="../../ressources/Total Protect (1).png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="../tableau_de_bord.html">Tableau de bord</a></li>
+                <li><a href="../Rendez-vous/Rendez_vous.html">Rendez-vous</a></li>
+                <li><a href="">Patient</a></li>
+                <li><a href="../Disponible/Disponibilite.html">Disponibilité</a></li>
+                <li><a class="yeo" href="">AY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- Le titre de la page -->
+
+    <div class="titre">
+        <h1>Mes patients</h1>
+        <span>Consultez les dossier de vos patients</span>
+
+    </div>
+
+    <section class="mini-block">
+
+        <div class="violet">
+
+            <div class="Nom">
+                <span>Totals patients</span>
+                <h2>5</h2>
+            </div>
+            <i class="fa-solid fa-user-group" style="color: rgb(140, 0, 255);"></i>
+
+        </div>
+
+        <div class="vert">
+
+            <div class="Nom">
+                <span>Totals actifs</span>
+                <h2>4</h2>
+            </div>
+            <i class="fa-solid fa-wave-square" style="color: rgb(0, 255, 34);"></i>
+
+        </div>
+
+        <div class="bleue">
+
+            <div class="Nom">
+                <span>femmes</span>
+                <h2>5</h2>
+            </div>
+            <i class="fa-solid fa-person-dress" style="color: rgb(0, 34, 255);"></i>
+        </div>
+
+        <div class="rouge">
+
+            <div class="Nom">
+                <span>Homme</span>
+                <h2>1</h2>
+            </div>
+
+            <i class="fa-solid fa-person" style="color: rgb(255, 39, 39);"></i>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- La bar de recherche et la carte du nombre de patients -->
+
+
+    <section class="carte">
+
+        <!-- Barre de recherche -->
+
+        <div class="barre-recherche">
+            <div class="champ-recherche">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Rechercher par nom ou ID patient...">
+            </div>
+        </div>
+
+
+        <!-- Carte blanche -->
+
+        <div class="carte-blanche">
+
+
+            <!-- Liste des patients -->
+
+
+            <div class="liste-patients">
+
+                <h2>Liste des patients (5)</h2>
+                <span class="sous-titre-patients">Cliquez sur un patient pour voir son dossier</span>
+
+
+
+                <!-- Patient 1 -->
+
+
+                <div class="patient-item">
+                    <div class="patient-avatar">BG</div>
+                    <div class="patient-info">
+                        <div class="patient-nom-statut">
+                            <h3>Broubi Gaspar #4521</h3>
+                            <span class="badge-actif">Actif</span>
+                        </div>
+                        <span class="patient-details">ID: #4521 • Femme • 32 ans</span>
+                        <div class="patient-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Dernière visite: 10/04/2026</span>
+                            <span><i class="fa-regular fa-file"></i> 5 consultations</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-dossier">Voir dossier</button>
+                </div>
+
+                <!-- Patient 2 -->
+
+
+                <div class="patient-item">
+                    <div class="patient-avatar">BG</div>
+                    <div class="patient-info">
+                        <div class="patient-nom-statut">
+                            <h3>Broubi Gaspar #3782</h3>
+                            <span class="badge-actif">Actif</span>
+                        </div>
+                        <span class="patient-details">ID: #3782 • Femme • 28 ans</span>
+                        <div class="patient-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Dernière visite: 09/04/2026</span>
+                            <span><i class="fa-regular fa-file"></i> 3 consultations</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-dossier">Voir dossier</button>
+                </div>
+
+
+
+                <!-- Patient 3 -->
+
+
+                <div class="patient-item">
+                    <div class="patient-avatar">BG</div>
+                    <div class="patient-info">
+                        <div class="patient-nom-statut">
+                            <h3>Broubi Gaspar #6543</h3>
+                            <span class="badge-actif">Actif</span>
+                        </div>
+                        <span class="patient-details">ID: #6543 • Femme • 35 ans</span>
+                        <div class="patient-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Dernière visite: 08/04/2026</span>
+                            <span><i class="fa-regular fa-file"></i> 7 consultations</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-dossier">Voir dossier</button>
+                </div>
+
+
+
+                <!-- Patient 4 -->
+
+
+                <div class="patient-item">
+                    <div class="patient-avatar">BG</div>
+                    <div class="patient-info">
+                        <div class="patient-nom-statut">
+                            <h3>Broubi Gaspar #2341</h3>
+                            <span class="badge-actif">Actif</span>
+                        </div>
+                        <span class="patient-details">ID: #2341 • Homme • 45 ans</span>
+                        <div class="patient-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Dernière visite: 07/04/2026</span>
+                            <span><i class="fa-regular fa-file"></i> 2 consultations</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-dossier">Voir dossier</button>
+                </div>
+
+
+
+                <!-- Patient 5 -->
+
+
+                <div class="patient-item">
+                    <div class="patient-avatar">BG</div>
+                    <div class="patient-info">
+                        <div class="patient-nom-statut">
+                            <h3>Broubi Gaspar #8910</h3>
+                            <span class="badge-inactif">Inactif</span>
+                        </div>
+                        <span class="patient-details">ID: #8910 • Homme • 52 ans</span>
+                        <div class="patient-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Dernière visite: 01/04/2026</span>
+                            <span><i class="fa-regular fa-file"></i> 1 consultation</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-dossier">Voir dossier</button>
+                </div>
+
+            </div>
+
+
+            <!-- DOSSIER PATIENT (modal) -->
+
+
+            <div class="overlay-dossier" id="overlay-dossier" style="display: none;">
+
+                <div class="dossier-patient">
+
+
+                    <!-- Entete -->
+
+                    <div class="dossier-entete">
+                        <div>
+                            <h2>Dossier patient</h2>
+                            <span id="dossier-nom">Broubi Gaspar #4521 - ID #4521</span>
+                        </div>
+                        <button type="button" class="fermer-dossier" id="fermer-dossier">✕</button>
+                    </div>
+
+
+
+                    <!-- Onglets -->
+
+                    <div class="dossier-onglets">
+                        <button type="button" class="onglet-dossier actif-dossier"
+                            id="btn-informations">Informations</button>
+                        <button type="button" class="onglet-dossier" id="btn-historique">Historique</button>
+                        <button type="button" class="onglet-dossier" id="btn-documents">Documents</button>
+                    </div>
+
+
+
+                    <!-- CONTENU INFORMATIONS -->
+
+
+                    <div id="contenu-informations">
+
+                        <div class="dossier-grille">
+
+                            <div class="dossier-info-bloc">
+                                <span>Âge</span>
+                                <h3>32 ans</h3>
+                            </div>
+
+                            <div class="dossier-info-bloc">
+                                <span>Genre</span>
+                                <h3>Femme</h3>
+                            </div>
+
+                            <div class="dossier-info-bloc">
+                                <span>Dernière visite</span>
+                                <h3>10/04/2026</h3>
+                            </div>
+
+                            <div class="dossier-info-bloc">
+                                <span>Consultations</span>
+                                <h3>5</h3>
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Conditions / Traitements -->
+
+
+                        <div class="dossier-conditions">
+                            <h3>Conditions / Traitements</h3>
+                            <div class="conditions-tags">
+                                <span class="condition-tag">Suivi gynécologique</span>
+                                <span class="condition-tag">IST traitée</span>
+                            </div>
+                        </div>
+
+                        <!-- Boutons -->
+                        <div class="dossier-boutons">
+                            <button type="button" class="btn-rdv-dossier">
+                                <i class="fa-regular fa-calendar"></i>
+                                Prendre rendez-vous
+                            </button>
+                            <button type="button" class="btn-note-dossier">
+                                <i class="fa-regular fa-file"></i>
+                                Ajouter une note
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONTENU HISTORIQUE -->
+
+
+                    <div id="contenu-historique" style="display: none;">
+
+                        <div class="historique-liste">
+
+                            <div class="historique-item">
+                                <div class="historique-barre bleue"></div>
+                                <div class="historique-info">
+                                    <div class="historique-entete">
+                                        <h3>Consultation gynécologique</h3>
+                                        <span>10 avril 2026</span>
+                                    </div>
+                                    <p>Consultation de routine. Tout va bien.</p>
+                                </div>
+                            </div>
+
+                            <div class="historique-item">
+                                <div class="historique-barre verte"></div>
+                                <div class="historique-info">
+                                    <div class="historique-entete">
+                                        <h3>Suivi post-traitement</h3>
+                                        <span>3 avril 2026</span>
+                                    </div>
+                                    <p>Traitement terminé avec succès. Résultats négatifs.</p>
+                                </div>
+                            </div>
+
+                            <div class="historique-item">
+                                <div class="historique-barre violette"></div>
+                                <div class="historique-info">
+                                    <div class="historique-entete">
+                                        <h3>Première consultation</h3>
+                                        <span>15 mars 2026</span>
+                                    </div>
+                                    <p>Symptômes d'IST. Traitement prescrit.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CONTENU DOCUMENTS -->
+
+                    <div id="contenu-documents" style="display: none;">
+
+                        <div class="documents-vide">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <span>Aucun document disponible</span>
+                            <button type="button" class="btn-ajouter-doc">Ajouter un document</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <script src="Patients.js"></script>
+
+
+</body>
+
+</html>

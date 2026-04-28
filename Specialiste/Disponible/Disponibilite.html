@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="../../ressources/jpeg" href="../../ressources/Total Protect (1).png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="Disponibilite.css">
+    <title>Disponibilité</title>
+</head>
+
+<body>
+
+
+    <header>
+       <img src="../../ressources/Total Protect (1).png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="../tableau_de_bord.html">Tableau de bord</a></li>
+                <li><a href="../Rendez-vous/Rendez_vous.html">Rendez-vous</a></li>
+                <li><a href="../Patient/Patient.html">Patient</a></li>
+                <li><a href="">disponibilité</a></li>
+                <li><a class="yeo" href="">AY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="disponible">
+        <h1>Gérer mes disponibilité</h1>
+        <span>Définissez vos horaires de consultation</span>
+    </div>
+
+
+    <!-- section de gauche contenant les horaire d'activité -->
+
+
+    <section class="Horaire">
+
+
+        <!-- Ici ce trouve les horaire des jour ouvrable -->
+
+        <div class="gauche">
+
+            <!-- LUNDI -->
+
+            <div class="plannig" id="jour-lundi">
+
+                <div class="entete">
+
+                    <div class="jour-gauche">
+
+                        <label class="bascule">
+                            <input type="checkbox" checked id="bascule-lundi">
+                            <span class="bascule-glice"></span>
+                        </label>
+
+                        <div>
+                            <h3>Lundi</h3>
+                            <span class="jour-plages">2 plage(s) horaire(s)</span>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="btn-ajouter-plage">+ Ajouter</button>
+
+                </div>
+
+                <div class="plages-select" id="plages-lundi">
+
+                    <div class="plage">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+
+                            <label>Début</label>
+                            <select>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>14:00</option>
+                            </select>
+
+                        </div>
+
+                        <div class="plage-selection">
+
+                            <label>Fin</label>
+                            <select>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>17:00</option>
+                            </select>
+
+                        </div>
+
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+                    <div class="plage">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+
+                            <label>Début</label>
+                            <select>
+                                <option>14:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                            </select>
+
+                        </div>
+
+                        <div class="plage-selection">
+
+                            <label>Fin</label>
+                            <select>
+                                <option>17:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                            </select>
+
+                        </div>
+
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MARDI -->
+
+            <div class="plannig" id="jour-mardi">
+
+                <div class="entete">
+
+                    <div class="jour-gauche">
+
+                        <label class="bascule">
+                            <input type="checkbox" checked id="bascule-mardi">
+                            <span class="bascule-glice"></span>
+                        </label>
+
+                        <div>
+                            <h3>Mardi</h3>
+                            <span class="jour-plages">2 plage(s) horaire(s)</span>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="btn-ajouter-plage">+ Ajouter</button>
+
+                </div>
+
+                <div class="plages-select" id="plages-mardi">
+
+                    <div class="plage">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+
+                            <label>Début</label>
+                            <select>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>14:00</option>
+                            </select>
+
+                        </div>
+
+                        <div class="plage-selection">
+
+                            <label>Fin</label>
+                            <select>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>17:00</option>
+                            </select>
+
+                        </div>
+
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+                    <div class="plage">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+
+                            <label>Début</label>
+                            <select>
+                                <option>14:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                            </select>
+
+                        </div>
+
+                        <div class="plage-selection">
+
+                            <label>Fin</label>
+                            <select>
+                                <option>17:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                            </select>
+
+                        </div>
+
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MERCREDI -->
+
+            <div class="plannig" id="jour-mercredi">
+
+                <div class="entete">
+
+                    <div class="jour-gauche">
+
+                        <label class="bascule">
+                            <input type="checkbox" checked id="bascule-mercredi">
+                            <span class="bascule-glice"></span>
+                        </label>
+
+                        <div>
+                            <h3>Mercredi</h3>
+                            <span class="jour-plages">2 plage(s) horaire(s)</span>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="btn-ajouter-plage">+ Ajouter</button>
+
+                </div>
+
+                <div class="plages-select" id="plages-mercredi">
+
+                    <div class="plage">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+
+                            <label>Début</label>
+                            <select>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>14:00</option>
+                            </select>
+
+                        </div>
+
+                        <div class="plage-selection">
+
+                            <label>Fin</label>
+                            <select>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>17:00</option>
+                            </select>
+
+                        </div>
+
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+
+                    <div class="plage">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+
+                            <label>Début</label>
+                            <select>
+                                <option>14:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                            </select>
+
+                        </div>
+
+                        <div class="plage-selection">
+
+                            <label>Fin</label>
+                            <select>
+                                <option>17:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                            </select>
+
+                        </div>
+
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- JEUDI -->
+
+
+            <div class="plannig" id="jour-jeudi">
+
+                <div class="entete">
+
+                    <div class="jour-gauche">
+
+                        <label class="bascule">
+                            <input type="checkbox" checked id="bascule-jeudi">
+                            <span class="bascule-glice"></span>
+                        </label>
+
+                        <div>
+                            <h3>Jeudi</h3>
+                            <span class="jour-plages">2 plage(s) horaire(s)</span>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="btn-ajouter-plage">+ Ajouter</button>
+
+                </div>
+
+                <div class="plages" id="plages-jeudi">
+
+                    <div class="plage-select">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+
+                            <label>Début</label>
+                            <select>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>14:00</option>
+                            </select>
+
+                        </div>
+
+                        <div class="plage-selection">
+
+                            <label>Fin</label>
+                            <select>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>17:00</option>
+                            </select>
+
+                        </div>
+
+                       <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+
+                    <div class="plage">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+
+                            <label>Début</label>
+                            <select>
+                                <option>14:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                            </select>
+
+                        </div>
+
+                        <div class="plage-selection">
+
+                            <label>Fin</label>
+                            <select>
+                                <option>17:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                            </select>
+
+                        </div>
+
+                       <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- VENDREDI -->
+
+            <div class="plannig" id="jour-vendredi">
+
+                <div class="entete">
+
+                    <div class="jour-gauche">
+
+                        <label class="bascule">
+                            <input type="checkbox" checked id="bascule-vendredi">
+                            <span class="bascule-glice"></span>
+                        </label>
+
+                        <div>
+                            <h3>Vendredi</h3>
+                            <span class="jour-plages">2 plage(s) horaire(s)</span>
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="btn-ajouter-plage">+ Ajouter</button>
+
+                </div>
+
+                <div class="plages-select" id="plages-vendredi">
+
+                    <div class="plage">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+                            <label>Début</label>
+                            <select>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                                <option>14:00</option>
+                            </select>
+                        </div>
+
+                        <div class="plage-selection">
+                            <label>Fin</label>
+                            <select>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                                <option>17:00</option>
+                            </select>
+                        </div>
+
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+                    <div class="plage">
+
+                        <i class="fa-regular fa-clock" style="color: #2563eb;"></i>
+
+                        <div class="plage-selection">
+                            <label>Début</label>
+                            <select>
+                                <option>14:00</option>
+                                <option>09:00</option>
+                                <option>10:00</option>
+                            </select>
+                        </div>
+
+                        <div class="plage-selection">
+                            <label>Fin</label>
+                            <select>
+                                <option>17:00</option>
+                                <option>12:00</option>
+                                <option>13:00</option>
+                            </select>
+                        </div>
+
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SAMEDI -->
+
+            <div class="jourferme" id="jour-samedi">
+
+                <div class="entete">
+
+                    <div class="jour-gauche">
+
+                        <label class="bascule">
+                            <input type="checkbox" id="bascule-samedi">
+                            <span class="bascule-glice"></span>
+                        </label>
+
+                        <div>
+                            <h3>Samedi</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIMANCHE-FERMÉ -->
+
+
+            <div class="jourferme" id="jour-dimanche">
+
+                <div class="entete">
+
+                    <div class="jour-gauche">
+
+                        <label class="bascule">
+                            <input type="checkbox" id="bascule-dimanche">
+                            <span class="bascule-glice"></span>
+                        </label>
+
+                        <div>
+                            <h3>Dimanche</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="droite">
+
+            <!-- Résumé -->
+
+            <div class="resume" id="resume">
+
+                <h3>Résumé</h3>
+
+                <div class="resume-total">
+                    <span class="heure-total">30.0h</span>
+                    <span>Total par semaine</span>
+                </div>
+
+                <div class="resume-statistiques">
+
+                    <div class="resume-statis">
+                        <span class="stat-bleu" id="nombre-jours">5</span>
+                        <span>Jours actifs</span>
+                    </div>
+
+                    <div class="resume-statis">
+                        <span class="stat-vert" id="nombre-plages">10</span>
+                        <span>Plages horaires</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Paramètres des consultations -->
+
+
+            <div class="parametres-consultation" id="parametres-consultation">
+
+                <h3>Paramètres des consultations</h3>
+
+                <div class="parametre-duree">
+
+                    <label>Durée d'une consultation</label>
+
+                    <div class="parametre-selection">
+
+                        <select id="duree-consultation">
+                            <option>45 minutes</option>
+                            <option>2 minutes</option>
+                            <option>4 heure</option>
+                        </select>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="parametre-pause">
+
+                    <label>Pause entre consultations</label>
+
+                    <div class="parametre-selection">
+
+                        <select id="duree-pause">
+                            <option>15 minutes</option>
+                            <option>30 minutes</option>
+                            <option>45 minutes</option>
+                        </select>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="parametre-astuce">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <p><strong>Astuce:</strong> Les patients pourront réserver uniquement sur vos créneaux disponibles
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Actions rapides -->
+
+
+            <div class="actions-rapides" id="actions-rapides">
+
+                <h3>Actions rapides</h3>
+
+                <button type="button" class="btn-action" id="btn-appliquer">Appliquer 9h-12h / 14h-17h</button>
+                <button type="button" class="btn-action" id="btn-desactiver">Tout désactiver</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

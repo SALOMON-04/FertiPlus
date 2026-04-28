@@ -1,0 +1,559 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF5E6;
+}
+
+         /* Ici ce trouve les modification du header */
+         
+header  {
+   display: flex;
+   justify-content: space-around;
+   gap: 20%;
+   font-size: 1.2em;
+
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: blue;
+}
+
+header img {
+    border-radius: 20%;
+    width: 150px;
+    height: 150px;
+    
+}
+
+nav ul{
+    display: flex;
+  margin-top: 10%;
+  gap: 30px;
+  list-style: none;
+  transform: translate(-5%);
+  
+
+}
+
+
+.yeo{
+    background-color: orange;
+    padding: 80%;
+    border-radius: 100%;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+        /* Stylisation des mini-block */
+
+
+
+      /* SECTION MINI-BLOCK  */
+
+.mini-bloc {
+  background: #fdf6ec;
+  padding: 2rem;
+  font-family: sans-serif;
+
+}
+
+
+.titre {
+    padding: 5%;
+    font-size: 1.5em;
+}
+
+.titre h1 {
+
+  font-weight: 700;
+  color: #111;
+ 
+
+}
+
+.titre span {
+
+  color: #555;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+
+      /* GRILLE HAUT (bleu + vert) */
+
+.bleu-vert {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin-bottom: 1.5rem;
+
+}
+
+
+      /* GRILLE BAS (violet centré)*/
+
+
+
+
+      /* BLOC BLEU */
+
+.block-bleue {
+  background: #ddeeff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  height: 30%;
+  width: 30%;
+  color: #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+
+.block-bleue:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.6rem 1.5rem rgba(204, 34, 238, 0.25);
+  border: 2px solid blue;
+}
+
+.block-bleue .calandrier {
+  display: flex;
+  gap: 2%;
+  font-size: 1em;
+  font-weight: 600;
+  
+
+}
+
+.calandrier span {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.block-bleue .calandrier i {
+  font-size: 1.7em;
+
+}
+
+.block-bleue h1 {
+  font-size: 3.5em;
+  font-weight: 800;
+  color: #2266dd;
+  margin: 0;
+}
+
+
+
+
+
+     /* BLOC VERT */
+
+.block-vert {
+ background: #ddffe0;
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  height: 30%;
+  width: 30%;
+  color: #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+
+.block-vert:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.6rem 1.5rem rgba(204, 34, 238, 0.25);
+  border: 2px solid rgb(0, 255, 0);
+}
+
+.block-vert .calandrier {
+ display: flex;
+  gap: 2%;
+  font-size: 1em;
+  font-weight: 600;
+
+
+}
+
+.calandrier span {
+  font-size: 1.2em;
+  color: #444;
+}
+
+.block-vert .calandrier i {
+  font-size: 1.7em;
+
+}
+
+.block-vert h1 {
+  font-size: 3.5em;
+  font-weight: 800;
+  color: #22bb44;
+  
+}
+
+
+
+
+     /* BLOC VIOLET   */
+
+
+.violet-orange {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  
+}
+
+
+.block-violet {
+  background: #f8ddff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  height: 35%;
+  width: 35%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+}
+
+
+.block-violet:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.6rem 1.5rem rgba(204, 34, 238, 0.25);
+  border: 2px solid rgb(174, 0, 255) ;
+}
+
+.block-violet .calandrier {
+  display: flex;
+  gap: 2%;
+  font-size: 1em;
+  font-weight: 600;
+  color: #000000;
+}
+
+.calandrier span {
+  font-size: 1.2em;
+
+}
+
+.block-violet .calandrier i {
+  font-size: 1.7em;
+
+}
+
+.block-violet h1 {
+  font-size: 3.5em;
+  font-weight: 800;
+  color: #cc22ee;
+
+}
+
+
+
+       /* stylisation de la carte blancle */
+
+
+       /* CARTE RENDEZ-VOUS */
+
+.carte-rendezvous {
+    background-color: white;
+    border-radius: 1em;
+    padding: 5%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+}
+
+.carte-rendezvous h2 {
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+.carte-rendezvous  span {
+    font-size: 0.9em;
+}
+
+      /* COULISSAGE */
+
+.coullissage {
+    display: flex;
+    background-color: #e9e9e9;
+    border-radius: 2em;
+    padding: 0.3em;
+    gap: 0.3em;
+    width: fit-content;
+}
+
+.coullissage span {
+    padding: 0.5em 1.2em;
+    border-radius: 2em;
+    font-size: 0.85em;
+    font-weight: 500;
+    cursor: pointer;
+    color: #59616c;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.coullissage span:first-child {
+    background-color: white;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+      /* BLOCK PATIENTS */
+
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    margin-top: 1em;
+}
+
+      /* BROUBI (chaque patient) */
+
+.broubi {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 3% 4%;
+    transition: box-shadow 0.2s ease;
+}
+
+.broubi:hover {
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.08);
+}
+
+/* INITIALES */
+
+.initial {
+    background-color: #2563eb;
+    color: white;
+    font-size: 1.5em !important; 
+    font-weight: 700;
+    border-radius: 50%;
+    width:2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+      /* NOM */
+
+.Nom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    flex: 1;
+    font-size: 1.2em;
+}
+
+.Nom h3 {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.Nom  span {
+    font-size: 0.8em;
+   opacity: 60%;
+}
+
+.heure {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 0.8em;
+    margin-top: 1%;
+}
+
+.heure i {
+    font-size: 0.9em;
+  
+}
+
+      /* BOUTONS */
+
+.bouton1 {
+    display: flex;
+    gap: 0.5em;
+
+}
+
+.blanc {
+    background-color: white;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.blanc:hover {
+    border: 1px solid #94a3b8;
+    transform: translateY(-2px);
+}
+
+.rouge {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.rouge:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+}
+
+
+
+      /* stylisation de bouton-lien */
+
+
+/*  BOUTON LIEN */
+
+.bouton-lien {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding: 2% 5%;
+
+   
+}
+
+       /* DISPONIBLE */
+
+.disponible {
+    background-color: white;
+    border-radius: 1em;
+    padding: 5%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+}
+
+.disponible a {
+    text-decoration: none;
+    color: #0f172a;
+}
+
+.disponible h3 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #0f172a;
+    gap: 10%;
+    margin: 0;
+}
+
+.disponible span {
+    font-size: 0.85em;
+    color: #64748b;
+}
+
+.disponible button {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    margin-top: 2%;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.disponible button:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+      /* LISTE PATIENT */
+
+.liste-patient {
+    background-color: white;
+    border-radius: 1em;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+}
+
+.liste {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    flex-wrap: wrap;
+}
+
+.liste i {
+    font-size: 1.3em;
+}
+
+.liste h3 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.liste span {
+    font-size: 0.85em;
+    color: #64748b;
+    width: 100%;
+}
+
+.liste-patient button {
+    background-color: white;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.liste-patient button:hover {
+    border: 1px solid #94a3b8;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF5E6;
+}
+
+         /* Ici ce trouve les modification du header */
+         
+header  {
+   display: flex;
+   justify-content: space-around;
+   gap: 20%;
+   font-size: 1.2em;
+
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: blue;
+}
+
+header img {
+    border-radius: 20%;
+    width: 150px;
+    height: 150px;
+    
+}
+
+nav ul{
+    display: flex;
+  margin-top: 10%;
+  gap: 30px;
+  list-style: none;
+  transform: translate(-5%);
+  
+
+}
+
+.yeo{
+    background-color: orange;
+    padding: 80%;
+    border-radius: 100%;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+.disponible {
+    padding: 5%;
+    font-size: 1.5em;
+}
+
+
+
+
+
+         /* Stylisation delasection Horaire et la div de gauche et droite */
+
+
+        /* SECTION HORAIRE */
+
+.Horaire {
+    display: flex;
+    gap: 3%;
+    padding: 2% 5%;
+    align-items: flex-start;
+}
+
+        /* GAUCHE */
+
+.gauche {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+        /* PLANNING (jours ouvrable) */
+
+.plannig{
+    background-color: white;
+    border-radius: 1em;
+    padding: 4%;
+    border: 1.5px solid #dbeafe;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+}
+
+        /* JOUR FERME */
+
+.jourferme {
+    background-color: white;
+    border-radius: 1em;
+    padding: 4%;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.04);
+}
+
+        /* ENTETE */
+
+.entete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jour-gauche {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.jour-gauche h3 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.jour-plages {
+    font-size: 0.8em;
+    color: #64748b;
+}
+
+       /* BASCULE  */
+
+.bascule {
+    position: relative;
+    display: inline-block;
+    width: 2.5em;
+    height: 1.4em;
+    flex-shrink: 0;
+}
+
+.bascule input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.bascule-glice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e2e8f0;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bascule-glice::before {
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    left: 0.2em;
+    bottom: 0.2em;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.bascule input:checked + .bascule-glice {
+    background-color: #2563eb;
+}
+
+.bascule input:checked + .bascule-glice::before {
+    transform: translateX(1.1em);
+}
+
+       /* BOUTON AJOUTER PLAGE */
+
+.btn-ajouter-plage {
+    background-color: white;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.4em 1em;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.btn-ajouter-plage:hover {
+    border: 1px solid #94a3b8;
+    transform: translateY(-2px);
+}
+
+        /* PLAGES */
+
+.plages-select {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.plage {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background-color: #f1f5f9;
+    border-radius: 0.8em;
+    padding: 3% 4%;
+}
+
+.plage-select {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background-color: #f1f5f9;
+    border-radius: 0.8em;
+    padding: 3% 4%;
+}
+
+        /* PLAGE SELECTION */
+
+.plage-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    flex: 1;
+}
+
+.plage-selection label {
+    font-size: 0.75em;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.plage-selection select {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #0f172a;
+    cursor: pointer;
+    appearance: none;
+}
+
+        /* DROITE */
+
+.droite {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+        /* RESUME */
+
+.resume {
+    background-color: #f5f0ff;
+    border-radius: 1em;
+    padding: 5%;
+    border: 1px solid #e9d5ff;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.resume h3 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.resume-total {
+    background-color: white;
+    border-radius: 0.8em;
+    padding: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    border: 1px solid #e9d5ff;
+}
+
+.heure-total {
+    font-size: 2em;
+    font-weight: 800;
+    color: #7c3aed;
+}
+
+.resume-total span:last-child {
+    font-size: 0.85em;
+    color: #64748b;
+}
+
+.resume-statistiques {
+    display: flex;
+    justify-content: space-around;
+}
+
+.resume-statis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.resume-statis span:last-child {
+    font-size: 0.8em;
+    color: #64748b;
+}
+
+.stat-bleu {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+.stat-vert {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #16a34a;
+}
+
+      /* PARAMETRES CONSULTATION */
+
+.parametres-consultation {
+    background-color: white;
+    border-radius: 1em;
+    padding: 5%;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+}
+
+.parametres-consultation h3 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.parametre-duree,
+.parametre-pause {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.parametre-duree label,
+.parametre-pause label {
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #0f172a;
+}
+
+.parametre-selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f5f9;
+    border-radius: 0.6em;
+    padding: 0.7em 1em;
+    cursor: pointer;
+}
+
+.parametre-selection select {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.9em;
+    color: #0f172a;
+    cursor: pointer;
+    width: 100%;
+    appearance: none;
+}
+
+.parametre-selection i {
+    color: #94a3b8;
+    font-size: 0.8em;
+    flex-shrink: 0;
+}
+
+.parametre-astuce {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+    background-color: #fefce8;
+    border-radius: 0.6em;
+    padding: 3%;
+}
+
+.parametre-astuce i {
+    color: #f59e0b;
+    flex-shrink: 0;
+    margin-top: 0.2em;
+}
+
+.parametre-astuce p {
+    font-size: 0.8em;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+      /*  ACTIONS RAPIDES */
+
+.actions-rapides {
+    background-color: #dbeafe;
+    border-radius: 1em;
+    padding: 5%;
+    border: 1px solid #bfdbfe;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.actions-rapides h3 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.btn-action {
+    background-color: white;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.btn-action:hover {
+    border: 1px solid #94a3b8;
+    transform: translateY(-2px);
+}
