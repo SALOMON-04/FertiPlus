@@ -44,7 +44,7 @@ nav ul{
       /* stylisation de la section bleue */
 
 .bleue {
-    background-color: rgb(51, 51, 253);
+    background-color: rgb(251, 229, 173);
 }
 
 .presentation {
@@ -74,7 +74,7 @@ nav ul{
 }
 
 .sante .priorite {
-    color: yellow;
+    color: rgb(255, 162, 0);
 }
 
 .sante p {
