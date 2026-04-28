@@ -44,6 +44,16 @@ nav ul{
 }
 
 
+.yeo{
+    background-color: orange;
+    padding: 80%;
+    border-radius: 100%;
+    font-weight: bold;
+    color: white;
+}
+
+
+
 
         /* Stylisation des mini-block */
 
@@ -58,15 +68,22 @@ nav ul{
 
 }
 
-.mini-bloc h1 {
-  font-size: 28px;
+
+.titre {
+    padding: 5%;
+    font-size: 1.5em;
+}
+
+.titre h1 {
+
   font-weight: 700;
   color: #111;
+ 
 
 }
 
-.mini-bloc span {
-  font-size: 15px;
+.titre span {
+
   color: #555;
   display: block;
   margin-bottom: 2rem;
