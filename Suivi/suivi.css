@@ -1,0 +1,580 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF5E6;
+}
+
+         /* Ici ce trouve les modification du header */
+         
+header  {
+   display: flex;
+   justify-content: space-around;
+
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: blue;
+}
+
+header img {
+    border-radius: 20%;
+    width: 130px;
+    height: 130px;
+}
+
+nav ul{
+    display: flex;
+  padding: 30px;
+  margin: 20px;
+  gap: 30px;
+  list-style: none;
+  transform: translate(-5%);
+
+}
+
+
+
+          /* stylisation du debut de la pages */
+
+
+.grande-section {
+    background-color: #f5f0ff;
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 5%;
+}
+
+    /* HERO SUIVI */
+
+.suivi {
+
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    text-align: center;
+}
+
+     /*  BADGE */
+
+.badge-suivi {
+    background-color: #ede9fe;
+    color: #7c3aed;
+    border-radius: 2em;
+    padding: 0.5em 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+     /* TITRE */
+
+.suivi h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.suivi p {
+    font-size: 1em;
+    color: #64748b;
+    margin: 0;
+}
+
+     /* ONGLETS SUIVI */
+
+.onglets-suivi {
+    display: flex;
+    width: 70%;
+    background-color: #e9e9e9;
+    border-radius: 2em;
+    padding: 0.3em;
+    gap: 0.3em;
+}
+
+.onglet-suivi {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0.8em;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2em;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.onglet-suivi.actif-suivi {
+    background-color: white;
+    color: #0f172a;
+}
+
+.onglet-suivi:hover {
+    color: #0f172a;
+}
+
+       /*  CARDS SUIVI */
+
+.cards-suivi {
+    
+    padding: 3% 8%;
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+}
+
+.card-suivi {
+    background-color: white;
+    border-radius: 1em;
+    padding: 5%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-suivi:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 24px rgba(124, 58, 237, 0.15);
+}
+
+.label {
+    font-size: 0.9em;
+    color: #64748b;
+}
+
+.date {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.date.violet { color: #7c3aed; }
+.date.rose   { color: #ec4899; }
+.date.bleu   { color: #2563eb; }
+
+.desc {
+    font-size: 0.85em;
+    color: #94a3b8;
+}
+
+
+
+        /* stylisation du calandrier */
+
+
+        /* CALENDRIER */
+
+.calendrier {
+    background-color: white;
+    border-radius: 1em;
+    padding: 3% 5%;
+    margin: 2% 5%;
+}
+
+.entete {
+    margin-bottom: 1.5em;
+}
+
+.entete h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.3em 0;
+}
+
+.entete p {
+    font-size: 0.9em;
+    color: #64748b;
+    margin: 0;
+}
+
+      /* GRILLE */
+
+.grille {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5em;
+}
+
+.jour-nom {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+      /* JOURS */
+
+.cal-jour {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.8em;
+    padding: 1.5em 0.5em;
+    text-align: center;
+    font-size: 0.95em;
+    color: #0f172a;
+    cursor: pointer;
+    transition: border 0.2s ease;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cal-jour:hover {
+    border: 1px solid #94a3b8;
+}
+
+.cal-jour.regles {
+    background-color: #fecdd3;
+    border-color: #fecdd3;
+}
+
+.cal-jour.ovulation {
+    background-color: #fbcfe8;
+    border-color: #fbcfe8;
+}
+
+.cal-jour.fertile {
+    background-color: #fce7f3;
+    border-color: #fce7f3;
+}
+
+.cal-jour.aujourd-hui {
+    border: 2px solid #7c3aed;
+}
+
+      /* LEGENDE */
+
+.legende {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 1.5em;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.85em;
+    color: #64748b;
+}
+
+.couleur {
+    width: 20px;
+    height: 20px;
+    border-radius: 0.3em;
+    border: 1px solid #e2e8f0;
+}
+
+.couleur.regles    { background-color: #fecdd3; }
+.couleur.ovulation { background-color: #fbcfe8; }
+.couleur.fertile   { background-color: #fce7f3; }
+
+
+
+      /* stylisation de l'enregistrement du cycle menstruel */
+
+
+
+   /*  PARAMETRES */
+
+.parametres {
+    background-color: white;
+    border-radius: 1em;
+    padding: 3% 5%;
+    margin: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    border: 1px solid #e2e8f0;
+}
+
+.parametres h2 {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+     /*  GROUPES */
+
+.groupe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.groupe label {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #0f172a;
+}
+
+.groupe input[type="date"],
+.groupe select {
+    background-color: #f1f5f9;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.8em 1em;
+    font-size: 0.95em;
+    color: #0f172a;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.groupe select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%2394a3b8' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1em center;
+    padding-right: 2.5em;
+}
+
+      /*  BOUTON */
+
+.btn-enregistrer {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.8em 1.5em;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-enregistrer:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+
+
+           /* stylisation de la partie Rappel */
+
+
+
+      /*  RAPPELS */
+
+.rappels {
+    background-color: white;
+    border-radius: 1em;
+    padding: 3% 5%;
+    margin: 2% 5%;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+       /* ENTETE */
+
+.rappels-entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rappels-entete h2 {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.3em 0;
+}
+
+.rappels-entete p {
+    font-size: 0.9em;
+    color: #64748b;
+    margin: 0;
+}
+
+.btn-ajouter {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.7em 1.5em;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-ajouter:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+     /* LISTE */
+
+.rappels-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.rappel-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.8em;
+    padding: 3% 4%;
+}
+
+.rappel-gauche {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.rappel-gauche i {
+    font-size: 1.3em;
+    flex-shrink: 0;
+}
+
+.rappel-gauche h3 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.2em 0;
+}
+
+.rappel-gauche span {
+    font-size: 0.85em;
+    color: #64748b;
+}
+
+      /*  BOUTON SUPPRIMER */
+
+.btn-supprimer {
+    background: none;
+    border: none;
+    font-size: 0.9em;
+    color: #64748b;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.btn-supprimer:hover {
+    color: #ef4444;
+}
+
+
+
+        /* Stylisation de la structure santé */
+
+
+
+      /*  SANTE GRILLE */
+
+.sante-grille {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    padding: 2% 5%;
+    margin: 0 0 2% 0;
+}
+
+       /* SANTE CARD */
+
+.sante-card {
+    background-color: white;
+    border-radius: 1em;
+    padding: 5%;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sante-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 24px rgba(0,0,0,0.08);
+}
+
+.sante-card i {
+    font-size: 1.8em;
+}
+
+.sante-card h3 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.sante-card p {
+    font-size: 0.9em;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+     /* BOUTONS */
+
+.btn-sante-noir {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-sante-noir:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+.btn-sante-blanc {
+    background-color: white;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+    transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.btn-sante-blanc:hover {
+    border: 1px solid #94a3b8;
+    transform: translateY(-2px);
+}
+
+

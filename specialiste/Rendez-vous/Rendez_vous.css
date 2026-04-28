@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF5E6;
+}
+
+         /* Ici ce trouve les modification du header */
+         
+header  {
+   display: flex;
+   justify-content: space-around;
+   gap: 20%;
+   font-size: 1.2em;
+
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: blue;
+}
+
+header img {
+    border-radius: 20%;
+    width: 150px;
+    height: 150px;
+    
+}
+
+nav ul{
+    display: flex;
+  margin-top: 10%;
+  gap: 30px;
+  list-style: none;
+  transform: translate(-5%);
+  
+
+}
+
+.yeo{
+    background-color: orange;
+    padding: 80%;
+    border-radius: 100%;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+         /* style de la classe gestion */
+
+.gestion {
+
+  display: block;
+  padding: 5%;
+  font-size: 1.2em;
+}
+
+
+
+         /* modification de la section agenda    */
+
+
+/*  AGENDA */
+
+.agenda {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2% 8%;
+   
+}
+
+     /* BARRE DE RECHERCHE */
+
+.recherche-bar {
+    background-color: white;
+    border-radius: 1em;
+    padding: 2% ;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    padding: 0.7em 1em;
+    flex: 1;
+}
+
+.search-input i {
+    color: #94a3b8;
+    flex-shrink: 0;
+}
+
+.search-input input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.9em;
+    color: #0f172a;
+    width: 100%;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.7em 1em;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.select i {
+    color: #94a3b8;
+    font-size: 0.8em;
+}
+
+      /* MINI BLOCK STATS */
+
+.mini-block {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+  
+}
+
+.numero {
+    background-color: white;
+    border-radius: 1em;
+    padding: 4%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.numero:hover {
+    transform: translateY(-3px);
+}
+
+.numero h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.numero span {
+    font-size: 0.9em;
+    opacity: 60%;
+}
+
+.bleue  { color: #2563eb; }
+.vert   { color: #16a34a; }
+.orange { color: #e07b00; }
+.rouge  { color: #ef4444; }
+
+      
+        /* LISTE RENEZ-VOUS */
+
+.liste-rdv {
+    background-color: white;
+    border-radius: 1em;
+    padding: 8%;
+    margin: 0 auto;
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+}
+
+.liste-rdv h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0f172a;
+    margin: 0;
+}
+
+.sous-titre-rdv {
+    font-size: 1em;
+    color: #64748b;
+}
+
+      /* RDV ITEM */
+
+.rdv-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.8em;
+    padding: 3% 4%;
+    transition: box-shadow 0.2s ease;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.rdv-item:hover {
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.08);
+}
+
+.rdv-initial {
+    background-color: #2563eb;
+    color: white;
+    font-size: 0.85em;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.rdv-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    flex: 1;
+}
+
+.rdv-nom-statut {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.rdv-nom-statut h3 {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.rdv-type {
+    font-size: 0.8em;
+    color: #64748b;
+}
+
+.rdv-details {
+    display: flex;
+    gap: 1em;
+    font-size: 0.8em;
+    opacity: 50%;
+}
+
+
+
+      /* BADGES STATUT */
+
+.badge-avenir {
+    background-color: #dbeafe;
+    color: #2563eb;
+    font-size: 0.75em;
+    font-weight: 600;
+    padding: 0.2em 0.7em;
+    border-radius: 2em;
+}
+
+.badge-termine {
+    background-color: #dcfce7;
+    color: #16a34a;
+    font-size: 0.75em;
+    font-weight: 600;
+    padding: 0.2em 0.7em;
+    border-radius: 2em;
+}
+
+.badge-annule {
+    background-color: #fee2e2;
+    color: #ef4444;
+    font-size: 0.75em;
+    font-weight: 600;
+    padding: 0.2em 0.7em;
+    border-radius: 2em;
+}
+
+       /* BOUTON VOIR DETAILS */
+
+.btn-voir {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.6em 1.2em;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-voir:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+        

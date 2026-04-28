@@ -1,0 +1,735 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF5E6;
+}
+
+         /* Ici ce trouve les modification du header */
+         
+header  {
+   display: flex;
+   justify-content: space-around;
+
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: blue;
+}
+
+header img {
+    border-radius: 20%;
+    width: 130px;
+    height: 130px;
+}
+
+nav ul{
+    display: flex;
+  padding: 30px;
+  margin: 20px;
+  gap: 30px;
+  list-style: none;
+  transform: translate(-5%);
+
+}
+
+
+
+             /* stylisation du block de connexion */
+
+
+      /* SECTION CONNEXION */
+
+.connexion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10%;
+}
+
+      /* CARTE CONNEXION */
+
+.carte-connexion {
+    background-color: white;
+    border-radius: 1em;
+    padding: 5%;
+    width: 45%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    position: relative;
+    box-shadow: 0px 10px 24px rgba(0,0,0,0.08);
+}
+
+      /* FERMER */
+
+.fermer-connexion {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #64748b;
+    transition: color 0.2s ease;
+}
+
+.fermer-connexion:hover {
+    color: #0f172a;
+}
+
+      /* ENTETE */
+
+.connexion-entete {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.connexion-entete h2 {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.connexion-entete p {
+    font-size: 0.85em;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+     /* GROUPE EMAIL */
+
+.connexion-groupe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.connexion-groupe label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.connexion-groupe input {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.8em 1em;
+    font-size: 0.95em;
+    color: #0f172a;
+    outline: none;
+    width: 100%;
+    transition: border 0.2s ease;
+}
+
+.connexion-groupe input:focus {
+    border: 1px solid #2563eb;
+}
+
+      /* BOUTON CONTINUER */
+
+.btn-continuer-connexion {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.9em;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-continuer-connexion:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+     /* OU OU SE CONNECTER */
+
+.connexion-ou {
+    text-align: center;
+    font-size: 0.9em;
+    color: #64748b;
+}
+
+     /* BOUTONS SOCIAUX */
+
+.btn-social {
+    background-color: white;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.btn-social:hover {
+    border: 1px solid #94a3b8;
+    transform: translateY(-2px);
+}
+
+.btn-social i {
+    font-size: 1.2em;
+}
+
+.Google {
+    width: 6%;
+}
+
+   /*LIENS */
+
+.connexion-liens {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 0.8em;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.connexion-liens a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.connexion-liens > a:first-child {
+    font-weight: 600;
+    font-size: 1em;
+}
+
+
+
+
+      /* SECTION UTILISATEUR */
+
+.Utilisateur {
+    
+    gap: 5%;
+    padding: 5% 8%;
+    align-items: flex-start;
+}
+
+.motivation-profil {
+     display: flex;
+    gap: 10%;
+    padding: 5% 8%;
+    align-items: flex-start;
+}
+
+      /* COULISSAGE PATIENT / SPECIALISTE */
+
+.coullisage {
+    display: flex;
+    background-color: #e9e9e9;
+    border-radius: 2em;
+    padding: 0.3em;
+    gap: 0.3em;
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+.patient,
+.specialiste {
+    padding: 0.6em 1.5em;
+    border-radius: 2em;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    color: #64748b;
+    margin: 0 auto;
+   
+}
+
+.patient {
+    background-color: white;
+    color: #0f172a;
+    width: 40%;
+    text-align: center;
+    
+}
+
+.specialiste {
+    width: 40%;
+    text-align: center;
+}
+
+      /* MOTIVATION (partie gauche) */
+
+.motivation {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 15%;
+}
+
+.motivation h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.motivation span {
+    font-size: 1.2em;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.motivation img {
+    width: 110%;
+    border-radius: 1em;
+    object-fit: cover;
+}
+
+.motivation h3 {
+    font-size: 1em;
+    color: #0f172a;
+}
+
+     /* PROFIL (partie droite) */
+
+.profil {
+    width: 50%;
+    background-color: white;
+    border-radius: 1em;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+    border: 2px solid #2563eb;
+    
+}
+
+.profil h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+}
+
+      /* PRESENTATION (Nom + Prénom côte à côte) */
+
+.Presentation {
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+    
+}
+
+.nom,
+.prenom {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+     /* GROUPES DE CHAMPS */
+
+.date-naissance,
+.goupe-sanguin,
+.localisation,
+.telephone,
+.allergie,
+.nom-contact,
+.tel-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    width: 100%;
+    margin:0 auto;
+}
+
+     /*  LABELS */
+
+.nom label,
+.prenom label,
+.date-naissance label,
+.goupe-sanguin label,
+.localisation label,
+.telephone label,
+.allergie label,
+.nom-contact label,
+.tel-contact label {
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #64748b;
+
+}
+
+.obligatoire {
+    color: #ef4444;
+}
+
+     /* INPUTS */
+
+.nom input,
+.prenom input,
+.date-naissance input,
+.goupe-sanguin input,
+.localisation input,
+.telephone input,
+.nom-contact input,
+.tel-contact input {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.7em 1em;
+    font-size: 0.9em;
+    color: #0f172a;
+    width: 100%;
+    transition: border 0.2s ease;
+}
+
+
+
+     /* TEXTAREA ALLERGIES */
+
+.allergie textarea {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.7em 1em;
+    font-size: 0.9em;
+    color: #0f172a;
+    width: 100%;
+    height: 5em;;
+    transition: border 0.2s ease;
+}
+
+
+     /* CONTACT URGENCE */
+
+.contact-urgent {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-urgent h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+}
+
+     /* BOUTONS */
+
+.patient-boutons {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 1em;
+}
+
+.btn-annuler {
+    background-color: white;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 45%;
+    transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.btn-annuler a {
+    text-decoration: none;
+    color: #0f172a;
+}
+
+.btn-annuler:hover {
+    border: 1px solid #94a3b8;
+    transform: translateY(-2px);
+}
+
+.btn-creer {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 45%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-creer a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-creer:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+
+
+
+             /* stylisation de la carte d'inscription du specialiste */
+
+
+
+      /* INSCRIPTION SPECIALISTE */
+
+.inscription-specialiste {
+    display: flex;
+    gap: 5%;
+    padding: 5% 8%;
+
+}
+
+      /* PARTIE GAUCHE */
+
+.spec-presentation {
+    width:50% ;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    font-size: 1.2em;
+    margin-top: 14%;
+  
+}
+
+.spec-presentation h1 {
+    font-size: 2em;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.spec-presentation span {
+    font-size: 0.95em;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.spec-presentation img {
+    width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+}
+
+      /* CHIFFRES */
+
+.chiffre {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chiffre_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.chiffre_1 h1 {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.chiffre_1 span {
+    font-size: 0.85em;
+    color: #64748b;
+}
+
+      /* PARTIE DROITE */
+
+.spec-profil {
+
+    background-color: white;
+     border: 2px solid blue;
+    border-radius: 1em;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+    font-size: 1.2em;
+}
+
+      /* ENTETE */
+
+.spec-entete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    text-align: center;
+}
+
+.spec-entete i {
+    background-color: #2563eb;
+    color: white;
+    font-size: 2em;
+    border-radius: 0.4em;
+    padding: 0.5em;
+}
+
+.spec-entete h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.spec-entete span {
+    font-size: 0.85em;
+    color: #64748b;
+}
+
+      /* RENSEIGNEMENT */
+
+.renseignement {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+      /* GROUPES */
+
+.spec-identifiant {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.spec-identifiant label {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.spec-input {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    background-color: #f1f5f9;
+    border-radius: 0.6em;
+    padding: 0.7em 1em;
+    border: 1px solid #e2e8f0;
+    transition: border 0.2s ease;
+}
+
+.spec-input:focus-within {
+    border: 1px solid #2563eb;
+}
+
+.spec-input i {
+    color: #94a3b8;
+    font-size: 0.95em;
+    flex-shrink: 0;
+}
+
+.spec-input input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.9em;
+    color: #0f172a;
+    width: 100%;
+}
+
+      /*  OPTIONS */
+
+.spec-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spec-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.9em;
+    color: #0f172a;
+    cursor: pointer;
+}
+
+.spec-lien {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+
+.spec-lien:hover {
+    text-decoration: underline;
+}
+
+      /* BOUTON */
+
+.btn-connecter-spec {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.9em;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-connecter-spec:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+     /* LIENS */
+
+.spec-liens {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    font-size: 0.85em;
+    color: #64748b;
+    text-align: center;
+}
+
+.spec-liens a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.spec-liens a:hover {
+    text-decoration: underline;
+}
+
+    /* SECURITE */
+
+.spec-securite {
+    background-color: #d1e8ff;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    text-align: center;
+    font-size: 0.8em;
+    color: #64748b;
+}
