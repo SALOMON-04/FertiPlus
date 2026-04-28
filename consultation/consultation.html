@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/jpeg" href="../ressources/Total Protect (1).png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="consultation_style.css">
+    <title>Consultation</title>
+</head>
+
+<body>
+
+
+
+    <header>
+        <img src="../ressources/Total Protect (1).png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../Symptome/symptome.html">Symptome</a></li>
+                <li><a href="../Education/education.html">Education</a></li>
+                <li><a href="">Suivi</a></li>
+                <li><a href="../consultation/consultation.html">Consultation</a></li>
+                <li><a href="">Compte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section class="consultation">
+
+        <!-- Badge -->
+
+        <div class="badge-consultation">
+            <i class="fa-regular fa-message"></i>
+            <span>Consultation Discrète</span>
+        </div>
+
+        <!-- Titre -->
+
+        <h1>Consultez un spécialiste en toute confidentialité</h1>
+        <p>Des gynécologues et urologues qualifiés disponibles pour vous</p>
+
+    </section>
+
+    <!-- Carte -->
+
+    <section class="carte-consultation">
+
+        <!-- Carte 1 : consultation -->
+
+        <div class="carte-bleu">
+
+            <i class="fa-solid fa-people-arrows" style="color: rgb(0, 47, 255);"></i>
+            <h2>Consultation</h2>
+            <p class="sous-titre">Consultez enpresentiel et prenné rendez-vous depuis chez vous</p>
+
+            <ul class="liste-bleu">
+                <li>Rendez-vous rapide (24h/24)</li>
+                <li>100% confidentiel et anonyme</li>
+                <li>Ordonnance donnée en personne</li>
+            </ul>
+
+        </div>
+
+        <!-- Carte 2 : Consultation -->
+
+        <div class="carte-vert">
+
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+            <h2>Garantie</h2>
+            <p class="sous-titre">Échange direct avec un spécialiste</p>
+
+            <ul class="liste-vert">
+                <li>Spécialistes qualifiés</li>
+                <li>Tarif accessibles pour tous</li>
+                <li>Idéal pour une entrevue directe</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- disposition des block pour prendre rendez-vous avec les spécialiste -->
+
+
+
+    <section class="specialistes">
+
+        <!-- BARRE DE NAVIGATION COULISSANTE -->
+        <div class="nav-slider">
+
+            <div class="nav-curseur " id="navCurseur"></div>
+
+            <button class="nav-btn actif" data-index="0">Tous les spécialistes</button>
+            <button class="nav-btn" data-index="1">Gynécologie</button>
+            <button class="nav-btn" data-index="2">Urologie</button>
+
+        </div>
+
+        <!-- PANNEAUX COULISSANTS -->
+
+        <div class="panneaux-enveloppe">
+
+            <div class="panneaux-piste slide-0" id="panneau-piste">
+
+                <!-- PANNEAU 0 : TOUS  -->
+
+                <div class="panneau" id="panneau-tous">
+
+                    <div class="grille">
+
+                        <div class="gyneco carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DAD</div>
+                                <div>
+                                    <h3>Dr. Aminata Diallo</h3>
+                                    <span class="titre">Gynécologue</span>
+                                </div>
+
+                            </div>
+
+                            <div class="lieu">
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Dakar, Sénégal</span>
+                            </div>
+
+                            <div class="note">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.8</span>
+                                <span class="avis">(127 avis)</span>
+                            </div>
+
+                            <div class="langues">
+                                <span class="langue">Français</span>
+                                <span class="langue">Wolof</span>
+                            </div>
+
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i>
+                                Prendre rendez-vous
+                            </button>
+
+                        </div>
+
+
+                        <div class="urologie carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DKM</div>
+                                <div>
+                                    <h3>Dr. Kwame Mensah</h3>
+                                    <span class="titre">Urologue</span>
+                                </div>
+
+                            </div>
+
+                            <div class="lieu">
+
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Accra, Ghana</span>
+                            </div>
+
+                            <div class="note">
+
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.9</span>
+                                <span class="avis">(156 avis)</span>
+
+                            </div>
+
+                            <div class="langues">
+
+                                <span class="langue">Français</span>
+                                <span class="langue">Anglais</span>
+
+                            </div>
+
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i>
+                                Prendre rendez-vous
+                            </button>
+
+                        </div>
+
+
+                        <div class="gyneco carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DFN</div>
+                                <div>
+                                    <h3>Dr. Fatou Ndiaye</h3>
+                                    <span class="titre">Gynécologue</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="lieu">
+
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Abidjan, Côte d'Ivoire</span>
+
+                            </div>
+
+                            <div class="note">
+
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.7</span>
+                                <span class="avis">(98 avis)</span>
+
+                            </div>
+
+                            <div class="langues">
+                                <span class="langue">Français</span>
+                            </div>
+
+                            <button type="button" class="btn-indisponible" disabled>Non disponible</button>
+
+                        </div>
+
+                        <div class="urologie carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DIT</div>
+
+                                <div>
+
+                                    <h3>Dr. Ibrahim Traoré</h3>
+                                    <span class="titre">Urologue</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="lieu">
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Bamako, Mali</span>
+                            </div>
+
+                            <div class="note">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.6</span>
+                                <span class="avis">(83 avis)</span>
+                            </div>
+
+                            <div class="langues">
+                                <span class="langue">Français</span>
+                                <span class="langue">Bambara</span>
+                            </div>
+
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i>
+                                Prendre rendez-vous
+                            </button>
+
+                        </div>
+
+                        <div class="gyneco carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DAD</div>
+                                <div>
+                                    <h3>Dr. Aïcha Diop</h3>
+                                    <span class="titre">Gynécologue</span>
+
+                                </div>
+                            </div>
+
+                            <div class="lieu">
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Lomé, Togo</span>
+                            </div>
+
+                            <div class="note">
+
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.9</span>
+                                <span class="avis">(142 avis)</span>
+
+                            </div>
+
+                            <div class="langues">
+
+                                <span class="langue">Français</span>
+                                <span class="langue">Éwé</span>
+
+                            </div>
+
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i>
+                                Prendre rendez-vous
+                            </button>
+
+                        </div>
+
+                        <div class="urologie carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DOB</div>
+                                <div>
+                                    <h3>Dr. Oumar Ba</h3>
+                                    <span class="titre">Urologue</span>
+                                </div>
+
+                            </div>
+
+                            <div class="lieu">
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Conakry, Guinée</span>
+                            </div>
+
+                            <div class="note">
+
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.5</span>
+                                <span class="avis">(67 avis)</span>
+
+                            </div>
+
+                            <div class="langues">
+                                <span class="langue">Français</span>
+                                <span class="langue">Soussou</span>
+                            </div>
+
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i>
+                                Prendre rendez-vous
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PANNEAU 1 : GYNÉCOLOGIE  -->
+
+                <div class="panneau" id="panneau-gyneco">
+
+                    <div class="grille">
+
+                        <div class="carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DAD</div>
+                                <div>
+                                    <h3>Dr. Aminata Diallo</h3>
+                                    <span class="titre">Gynécologue</span>
+                                </div>
+
+                            </div>
+
+                            <div class="lieu">
+
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Dakar, Sénégal</span>
+
+                            </div>
+
+                            <div class="note">
+
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.8</span>
+                                <span class="avis">(127 avis)</span>
+
+                            </div>
+
+                            <div class="langues">
+
+                                <span class="langue">Français</span>
+                                <span class="langue">Wolof</span>
+
+                            </div>
+
+                            <button type="button" class="btn-rdv-spec"><i class="fa-regular fa-calendar"></i> Prendre
+                                rendez-vous </button>
+
+                        </div>
+
+                        <div class="carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DFN</div>
+
+                                <div>
+                                    <h3>Dr. Fatou Ndiaye</h3>
+                                    <span class="titre">Gynécologue</span>
+                                </div>
+                            </div>
+
+                            <div class="lieu">
+
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Abidjan, Côte d'Ivoire</span>
+
+                            </div>
+
+                            <div class="note">
+
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.7</span>
+                                <span class="avis">(98 avis)</span>
+
+                            </div>
+
+                            <div class="langues"><span class="langue">Français</span></div>
+
+                            <button type="button" class="btn-indisponible" disabled>Non disponible</button>
+
+                        </div>
+
+                        <div class="carte">
+
+                            <div class="entete">
+                                <div class="avatar">DAD</div>
+                                <div>
+                                    <h3>Dr. Aïcha Diop</h3>
+                                    <span class="titre">Gynécologue</span>
+                                </div>
+                            </div>
+
+                            <div class="lieu">
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Lomé, Togo</span>
+                            </div>
+
+                            <div class="note">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.9</span>
+                                <span class="avis">(142 avis)</span>
+                            </div>
+
+                            <div class="langues">
+                                <span class="langue">Français</span>
+                                <span class="langue">Éwé</span>
+                            </div>
+
+                            <button type="button" class="btn-rdv-spec"><i class="fa-regular fa-calendar"></i> Prendre
+                                rendez-vous</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- PANNEAU 2 : UROLOGIE -->
+
+                <div class="panneau" id="panneau-urologie">
+
+                    <div class="grille">
+
+                        <div class="carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DKM</div>
+
+                                <div>
+                                    <h3>Dr. Kwame Mensah</h3>
+                                    <span class="titre">Urologue</span>
+                                </div>
+
+                            </div>
+
+                            <div class="lieu">
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Accra, Ghana</span>
+                            </div>
+
+                            <div class="note">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.9</span><span class="avis">(156 avis)</span>
+                            </div>
+
+                            <div class="langues">
+                                <span class="langue">Français</span>
+                                <span class="langue">Anglais</span>
+                            </div>
+
+                            <button type="button" class="btn-rdv-spec"><i class="fa-regular fa-calendar"></i> prendre
+                                rendez-vous</button>
+
+                        </div>
+
+                        <div class="carte">
+
+                            <div class="entete">
+
+                                <div class="avatar">DIT</div>
+                                <div>
+                                    <h3>Dr. Ibrahim Traoré</h3>
+                                    <span class="titre">Urologue</span>
+                                </div>
+                            </div>
+
+                            <div class="lieu">
+                                <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                                <span>Bamako, Mali</span>
+                            </div>
+
+                            <div class="note">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.6</span>
+                                <span class="avis">(83 avis)</span>
+                            </div>
+
+                            <div class="langues">
+                                <span class="langue">Français</span>
+                                <span class="langue">Bambara</span>
+                            </div>
+
+                            <button type="button" class="btn-rdv-spec"><i class="fa-regular fa-calendar"></i>
+                                Prendre rendez-vous</button>
+
+                        </div>
+
+                        <div class="carte">
+
+                            <div class="entete">
+                                <div class="avatar">DOB</div>
+                                <div>
+                                    <h3>Dr. Oumar Ba</h3><span class="titre">Urologue</span>
+                                </div>
+                            </div>
+
+                            <div class="lieu">
+                                <i class="fa-regular fa-location-dot"></i>
+                                <span>Conakry, Guinée</span>
+                            </div>
+
+                            <div class="note">
+                                <i class="fa-solid fa-star"></i><span>4.5</span>
+                                <span class="avis">(67 avis)</span>
+                            </div>
+
+                            <div class="langues">
+                                <span class="langue">Français</span>
+                                <span class="langue">Soussou</span>
+                            </div>
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i> Prendre rendez-vous</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Carte d'enregistrment pour le rendez-vous -->
+
+    <div class="carte-rendev" id="carte-rendev" style="display: none;">
+
+        <div class="rendez-vous">
+
+            <div class="entete-rendev">
+
+                <div>
+                    <h2>Réserver une consultation</h2>
+                    <p id="medecin">Avec Dr. Kwame Mensah - Urologue</p>
+                </div>
+
+                <button type="button" class="fermer" id="fermer">✕</button>
+
+            </div>
+
+            <div class="groupe-rendev">
+
+                <label>Type de consultation</label>
+
+                <select>
+                    <option value="" disabled selected>Choisir</option>
+                    <option>Téléconsultation</option>
+                    <option>Consultation en personne</option>
+                </select>
+
+            </div>
+
+            <div class="dat-souhaitee">
+                <label>Date souhaitée</label>
+                <input type="date">
+            </div>
+
+            <div class="Heure">
+
+                <label>Heure</label>
+                <select>
+                    <option value="" disabled selected>Sélectionner</option>
+                    <option>08:00</option>
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                    <option>16:00</option>
+                </select>
+
+            </div>
+
+            <div class="motif-consutation">
+                <label>Motif de consultation</label>
+                <textarea placeholder="Décrivez brièvement votre situation..."></textarea>
+            </div>
+
+            <div class="Numero-tel">
+                <label>Téléphone (pour confirmation)</label>
+                <input type="tel" placeholder="+221 XX XXX XX XX">
+            </div>
+
+            <button type="button" class="btn-confirmation">Confirmer le rendez-vous</button>
+
+        </div>
+    </div>
+
+
+
+    <!-- stylisation du block 'votre fertilité  notre préocupation' -->
+
+
+
+    <section class="garantie">
+
+        <div class="garantie-entete">
+            <img src="../ressources/Total Protect (1).png" alt="logo">
+            <h2>Votre fertilité notre préoccupation</h2>
+        </div>
+
+        <ul class="garantie-liste">
+            <li><i class="fa-solid fa-check"></i> Toutes les réservations de consultation sont reçues et traitées</li>
+            <li><i class="fa-solid fa-check"></i> Vos données médicales sont cryptées de bout en bout</li>
+            <li><i class="fa-solid fa-check"></i> Paiement sécurisés et de tout type</li>
+            <li><i class="fa-solid fa-check"></i> Des spécialistes qui vous suivent du début jusqu'à la fin de votre traitement</li>
+        </ul>
+
+    </section>
+
+
+
+
+    <script src="../script/consultation.js"></script>
+
+
+
+
+
+</body>
+
+</html>

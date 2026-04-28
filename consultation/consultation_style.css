@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF5E6;
+}
+
+         /* Ici ce trouve les modification du header */
+         
+header  {
+   display: flex;
+   justify-content: space-around;
+
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: blue;
+}
+
+header img {
+    border-radius: 20%;
+    width: 130px;
+    height: 130px;
+}
+
+nav ul{
+    display: flex;
+  padding: 30px;
+  margin: 20px;
+  gap: 30px;
+  list-style: none;
+  transform: translate(-5%);
+
+}
+
+
+
+
+          /* stylisation de la du debut de la page */
+
+      /*SECTION CONSULTATION */
+
+.specialistes {
+    padding: 40px 32px;
+}
+
+    /* SECTION HERO */
+
+.consultation {
+    padding: 5% 10%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1.5em; 
+    text-align: center; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.badge-consultation {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fed6ac;
+    border: 1.5px solid #e0dbd5;
+    border-radius: 50px;
+    padding: 0.4em 1em;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.2em;
+}
+
+.consultation h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 0.6em;
+    max-width: 60%;
+}
+
+.consultation p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #666;
+}
+
+
+     /* SECTION CARTES CONSULTATION*/
+
+.carte-consultation {
+    display: flex;
+    gap: 1.5%;
+    padding: 0 4% 4%;
+}
+
+
+
+.carte-bleu,
+.carte-vert {
+    flex: 1;
+    border-radius: 20px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.carte-bleu {
+    background: #eef2ff;
+    border: 1.5px solid #c7d2fe;
+    transition: transform 0.2s ease, box-shadow 0.2s ease
+}
+
+.carte-vert {
+    background: #f0fdf4;
+    border: 1.5px solid #bbf7d0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease
+}
+
+.carte-bleu:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 24px rgba(0, 47, 255, 0.15);
+}
+
+.carte-vert:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 24px rgba(22, 163, 74, 0.15);
+}
+
+.carte-bleu i {
+    font-size: 1.8rem;
+    color: #002fff;
+}
+
+.carte-vert i {
+    font-size: 1.8rem;
+    color: #16a34a;
+}
+
+.carte-bleu h2,
+.carte-vert h2 {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.sous-titre {
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    color: #666;
+}
+
+.liste-bleu,
+.liste-vert {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+
+.liste-bleu li,
+.liste-vert li {
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    font-weight: 500;
+    color: #444;
+    padding-left: 1.3em;
+    position: relative;
+}
+
+.liste-bleu li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #002fff;
+    font-weight: 700;
+}
+
+.liste-vert li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-weight: 700;
+}
+
+
+
+
+
+
+     /* BARRE DE NAVIGATION COULISSANTE */
+
+.nav-slider {
+    display: inline-flex;
+    background: #ffffff;
+    border: 1.5px solid #e0dbd5;
+    border-radius: 50px;
+    padding: 4px;
+    margin-bottom: 36px;
+    position: relative;
+}
+
+.nav-curseur {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: calc(100% - 8px);
+    background: #1a1a1a;
+    border-radius: 50px;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-btn {
+    
+    z-index: 1;
+    padding: 10px 24px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    color: #888;
+    border-radius: 50px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+    
+}
+
+.nav-btn.actif {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+         /* stylisation des block de consultation */
+
+   /*  PANNEAUX COULISSANTS  */
+
+.panneaux-enveloppe {
+    overflow: hidden;
+    width: 100%;
+}
+
+.panneaux-piste {
+
+    display: flex;
+    width: 300%;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.panneaux-piste.slide-0 { transform: translateX(0%); }
+.panneaux-piste.slide-1 { transform: translateX(-33.333%); }
+.panneaux-piste.slide-2 { transform: translateX(-66.666%); }
+
+.panneau {
+    width: 33.333%;
+    flex-shrink: 0;
+}
+
+    /*  GRILLE */
+.grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+    /* CARTE */
+
+.carte {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 28px 24px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carte:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+}
+
+.entete {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #e8e4df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.entete h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.titre {
+    font-size: 13px;
+    color: #888;
+    font-weight: 400;
+    margin-top: 2px;
+    display: block;
+}
+
+.lieu {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13.5px;
+    color: #666;
+}
+
+.lieu i {
+     color: #999; font-size: 14px;
+ }
+
+.note {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.note i { color: #f5a623; font-size: 15px; }
+
+.avis {
+    font-weight: 400;
+    color: #888;
+    font-size: 13px;
+}
+
+.langues {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.langue {
+    padding: 4px 12px;
+    border-radius: 50px;
+    border: 1.5px solid #e0dbd5;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    background: #faf9f7;
+}
+
+.btn-rdv-spec {
+    margin-top: auto;
+    width: 100%;
+    padding: 13px;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-rdv-spec:hover {
+    background: #333;
+    transform: scale(1.01);
+}
+
+.btn-indisponible {
+    margin-top: auto;
+    width: 100%;
+    padding: 13px;
+    background: transparent;
+    color: #aaa;
+    border: 1.5px solid #e0dbd5;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: not-allowed;
+}
+
+
+
+
+      /* stylysation de la carde de prise de rendevous au clic du bouton "prendre rendez-vous" */
+
+
+      /* CARTE DE RENDEZ-VOUS CACHEZ */
+
+.carte-rendev {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rendez-vous {
+    background-color: white;
+    border-radius: 1em;
+    padding: 5%;
+    width: 40%;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+      /* ENTETE */
+
+.entete-rendev {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.entete-rendev h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.3em 0;
+}
+
+.entete-rendev p {
+    font-size: 0.9em;
+    color: #64748b;
+    margin: 0;
+}
+
+.fermer {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #64748b;
+    transition: color 0.2s ease;
+}
+
+.fermer:hover {
+    color: #0f172a;
+}
+
+      /* GROUPES */
+
+.groupe-rendev,
+.dat-souhaitee,
+.Heure,
+.motif-consutation,
+.Numero-tel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.groupe-rendev label,
+.dat-souhaitee label,
+.Heure label,
+.motif-consutation label,
+.Numero-tel label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.groupe-rendev select,
+.dat-souhaitee input,
+.Heure select,
+.Numero-tel input {
+    background-color: #f1f5f9;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.8em 1em;
+    font-size: 0.95em;
+    color: #0f172a;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.motif-consutation textarea {
+    background-color: #f1f5f9;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.8em 1em;
+    font-size: 0.95em;
+    color: #0f172a;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    resize: none;
+}
+
+      /* BOUTON CONFIRMATION */
+
+.btn-confirmation {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-confirmation:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+
+
+        /* stylisation du block garantie */
+
+
+.garantie {
+    background-color: #d6e4f7;
+    border-radius: 1em;
+    padding: 3% 5%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 60%;
+    margin-top: 8%;
+    box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.08)
+}
+
+.garantie-entete {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.garantie-entete img {
+    width: 5%;
+    min-width: 50px;
+    border-radius: 0.6em;
+    padding: 0.3em;
+}
+
+.garantie-entete h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.garantie-liste {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.garantie-liste li {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    font-size: 0.95em;
+}
