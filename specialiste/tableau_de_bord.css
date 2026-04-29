@@ -1,25 +1,30 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #FFF5E6;
 }
 
-         /* Ici ce trouve les modification du header */
-         
-header  {
-   display: flex;
-   justify-content: space-around;
-   gap: 20%;
-   font-size: 1.2em;
+body.menu-ouvert {
+    overflow: hidden;
+}
 
+     /*HEADER  */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    font-size: 1.2em;
 }
 
 header a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 header a:hover {
@@ -28,80 +33,260 @@ header a:hover {
 
 header img {
     border-radius: 20%;
-    width: 150px;
-    height: 150px;
-    
+    width: 130px;
+    height: 130px;
 }
 
-nav ul{
+nav ul {
     display: flex;
-  margin-top: 10%;
-  gap: 30px;
-  list-style: none;
-  transform: translate(-5%);
-  
-
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin-top: 0;
 }
 
+nav ul li a i {
+    color: #C2763A;
+    transition: color 0.2s ease;
+}
 
-.yeo{
+nav ul li a:hover i {
+    color: #E8943A;
+}
+
+.yeo {
     background-color: orange;
-    padding: 80%;
-    border-radius: 100%;
+    padding: 0.45em 0.75em;
+    border-radius: 80%;
+    width: 90%;
     font-weight: bold;
     color: white;
 }
 
+        /* Ici ce trouve le style de mon Burger */
 
 
+/*  BURGER BOUTON  */
 
-        /* Stylisation des mini-block */
+.burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #fdf3d6, #fff0c2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 200;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.burger:hover {
+    transform: scale(1.07);
+}
 
-
-      /* SECTION MINI-BLOCK  */
-
-.mini-bloc {
-  background: #fdf6ec;
-  padding: 2rem;
-  font-family: sans-serif;
-
+.burger i {
+    font-size: 1.3em;
+    color: #C2763A;
+    transition: transform 0.3s ease;
 }
 
 
+/*  EN-TÊTE DU MENU MOBILE  */
+
+.nav-header {
+    display: none;
+}
+
+
+/* OVERLAY */
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 149;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-overlay.visible {
+    display: block;
+    opacity: 1;
+}
+
+      /*  BURGER */
+
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex;
+    }
+
+    #mainNav {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 290px;
+        height: 100vh;
+        background: linear-gradient(160deg, #acdcff 0%, #fff1c9 60%, #fcecbd 100%);
+        z-index: 150;
+        transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    #mainNav.ouvert {
+        right: 0;
+    }
+
+
+
+    /* En-tête du menu avec logo + bouton fermer */
+
+    .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .burger-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .burger-close:hover {
+        background: rgba(255, 255, 255, 0.28);
+        transform: rotate(90deg);
+    }
+
+    .burger-close i {
+        color: rgb(0, 0, 0);
+        font-size: 1.1em;
+    }
+
+    /* Liste des liens */
+
+    #mainNav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 16px 12px;
+        margin-top: 0;
+        list-style: none;
+    }
+
+    #mainNav ul li {
+        width: 100%;
+    }
+
+    #mainNav ul li a {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 13px 16px;
+        border-radius: 12px;
+        font-size: 0.97em;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    #mainNav ul li a i {
+        font-size: 1.1em;
+        width: 22px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.2s ease;
+    }
+
+    #mainNav ul li a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        padding-left: 22px;
+    }
+
+    #mainNav ul li a:hover i {
+        color: white;
+    }
+
+    /* Avatar AY */
+
+    #mainNav ul li a.yeo {
+        background: rgba(255, 165, 0, 0.25);
+        border: 1px solid rgba(255, 165, 0, 0.5);
+        color: #ffd580;
+        font-weight: bold;
+        margin-top: 8px;
+        justify-content: center;
+        font-size: 1.1em;
+    }
+
+    #mainNav ul li a.yeo:hover {
+        background: rgba(255, 165, 0, 0.4);
+        color: white;
+        padding-left: 16px;
+    }
+}
+
+
+
+
+         /* Ici ce trouve le style de la section du mini block */
+
+
+/* MINI BLOCS */
+
+.mini-bloc {
+    background: #fdf6ec;
+    padding: 2rem;
+    font-family: sans-serif;
+}
+
 .titre {
-    padding: 5%;
-    font-size: 1.5em;
+    padding: 2% 4%;
+    font-size: 1.4em;
 }
 
 .titre h1 {
-
-  font-weight: 700;
-  color: #111;
- 
-
+    font-weight: 700;
+    color: #111;
 }
 
 .titre span {
-
-  color: #555;
-  display: block;
-  margin-bottom: 2rem;
+    color: #555;
+    display: block;
+    margin-bottom: 1.5rem;
 }
-
-
-      /* GRILLE HAUT (bleu + vert) */
 
 .bleu-vert {
-  display: flex;
-  justify-content: center;
-  gap: 10%;
-  margin-bottom: 1.5rem;
-
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    margin-bottom: 1.5rem;
+    padding: 0 4%;
 }
-
-
-      /* GRILLE BAS (violet centré)*/
 
 
 
@@ -109,174 +294,146 @@ nav ul{
       /* BLOC BLEU */
 
 .block-bleue {
-  background: #ddeeff;
-  border-radius: 18px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2%;
-  height: 30%;
-  width: 30%;
-  color: #111;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    background: #ddeeff;
+    border-radius: 18px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 28%;
+    color: #111;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 .block-bleue:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 0.6rem 1.5rem rgba(204, 34, 238, 0.25);
-  border: 2px solid blue;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.6rem 1.5rem rgba(204, 34, 238, 0.25);
+    border: 2px solid blue;
 }
 
 .block-bleue .calandrier {
-  display: flex;
-  gap: 2%;
-  font-size: 1em;
-  font-weight: 600;
-  
-
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .calandrier span {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #333;
 }
 
 .block-bleue .calandrier i {
-  font-size: 1.7em;
-
+    font-size: 1.4em;
 }
 
 .block-bleue h1 {
-  font-size: 3.5em;
-  font-weight: 800;
-  color: #2266dd;
-  margin: 0;
+    font-size: 2.8em;
+    font-weight: 800;
+    color: #2266dd;
+    margin: 0;
 }
-
-
-
-
 
      /* BLOC VERT */
 
 .block-vert {
- background: #ddffe0;
-  border-radius: 18px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2%;
-  height: 30%;
-  width: 30%;
-  color: #111;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    background: #ddffe0;
+    border-radius: 18px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 28%;
+    color: #111;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 .block-vert:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 0.6rem 1.5rem rgba(204, 34, 238, 0.25);
-  border: 2px solid rgb(0, 255, 0);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.6rem 1.5rem rgba(204, 34, 238, 0.25);
+    border: 2px solid rgb(0, 255, 0);
 }
 
 .block-vert .calandrier {
- display: flex;
-  gap: 2%;
-  font-size: 1em;
-  font-weight: 600;
-
-
-}
-
-.calandrier span {
-  font-size: 1.2em;
-  color: #444;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .block-vert .calandrier i {
-  font-size: 1.7em;
-
+    font-size: 1.4em;
 }
 
 .block-vert h1 {
-  font-size: 3.5em;
-  font-weight: 800;
-  color: #22bb44;
-  
+    font-size: 2.8em;
+    font-weight: 800;
+    color: #22bb44;
 }
 
 
 
 
-     /* BLOC VIOLET   */
-
+       /* BLOC VIOLET */
 
 .violet-orange {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
 }
-
 
 .block-violet {
-  background: #f8ddff;
-  border-radius: 18px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 10%;
-  height: 35%;
-  width: 35%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-
+    background: #f8ddff;
+    border-radius: 18px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 28%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 .block-violet:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 0.6rem 1.5rem rgba(204, 34, 238, 0.25);
-  border: 2px solid rgb(174, 0, 255) ;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.6rem 1.5rem rgba(204, 34, 238, 0.25);
+    border: 2px solid rgb(174, 0, 255);
 }
 
 .block-violet .calandrier {
-  display: flex;
-  gap: 2%;
-  font-size: 1em;
-  font-weight: 600;
-  color: #000000;
-}
-
-.calandrier span {
-  font-size: 1.2em;
-
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000000;
 }
 
 .block-violet .calandrier i {
-  font-size: 1.7em;
-
+    font-size: 1.4em;
 }
 
 .block-violet h1 {
-  font-size: 3.5em;
-  font-weight: 800;
-  color: #cc22ee;
-
+    font-size: 2.8em;
+    font-weight: 800;
+    color: #cc22ee;
 }
 
 
 
-       /* stylisation de la carte blancle */
+
+           /* Ici ce trouve le style de la carte blance */
 
 
-       /* CARTE RENDEZ-VOUS */
+
+         /* CARTE RENDEZ-VOUS */
 
 .carte-rendezvous {
     background-color: white;
     border-radius: 1em;
-    padding: 5%;
-    margin: 5%;
+    padding: 3% 4%;
+    margin: 2% 4%;
     display: flex;
     flex-direction: column;
     gap: 1.2em;
@@ -284,16 +441,13 @@ nav ul{
 }
 
 .carte-rendezvous h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
-
 }
 
-.carte-rendezvous  span {
+.carte-rendezvous span {
     font-size: 0.9em;
 }
-
-      /* COULISSAGE */
 
 .coullissage {
     display: flex;
@@ -320,8 +474,6 @@ nav ul{
     font-weight: 600;
 }
 
-      /* BLOCK PATIENTS */
-
 .block {
     display: flex;
     flex-direction: column;
@@ -329,15 +481,13 @@ nav ul{
     margin-top: 1em;
 }
 
-      /* BROUBI (chaque patient) */
-
 .broubi {
     display: flex;
     align-items: center;
     gap: 1em;
     border: 1px solid #e2e8f0;
     border-radius: 15px;
-    padding: 3% 4%;
+    padding: 2% 3%;
     transition: box-shadow 0.2s ease;
 }
 
@@ -345,30 +495,26 @@ nav ul{
     box-shadow: 0px 4px 16px rgba(0,0,0,0.08);
 }
 
-/* INITIALES */
-
 .initial {
     background-color: #2563eb;
     color: white;
-    font-size: 1.5em !important; 
+    font-size: 1.2em !important;
     font-weight: 700;
     border-radius: 50%;
-    width:2em;
-    height: 2em;
+    width: 2.5em;
+    height: 2.5em;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-shrink: 0;
 }
-
-      /* NOM */
 
 .Nom {
     display: flex;
     flex-direction: column;
     gap: 0.2em;
     flex: 1;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .Nom h3 {
@@ -378,9 +524,9 @@ nav ul{
     margin: 0;
 }
 
-.Nom  span {
+.Nom span {
     font-size: 0.8em;
-   opacity: 60%;
+    opacity: 60%;
 }
 
 .heure {
@@ -393,15 +539,11 @@ nav ul{
 
 .heure i {
     font-size: 0.9em;
-  
 }
-
-      /* BOUTONS */
 
 .bouton1 {
     display: flex;
     gap: 0.5em;
-
 }
 
 .blanc {
@@ -440,27 +582,26 @@ nav ul{
 
 
 
-      /* stylisation de bouton-lien */
+
+         /* Ici ce trouse le style des block du bas */
 
 
-/*  BOUTON LIEN */
+
+          /* BOUTON LIEN  */
 
 .bouton-lien {
     display: flex;
     justify-content: center;
     gap: 2%;
-    padding: 2% 5%;
-
-   
+    padding: 2% 4%;
+    flex-wrap: wrap;
 }
-
-       /* DISPONIBLE */
 
 .disponible {
     background-color: white;
     border-radius: 1em;
-    padding: 5%;
-    width: 25%;
+    padding: 2.5%;
+    width: 38%;
     display: flex;
     flex-direction: column;
     gap: 0.8em;
@@ -476,7 +617,6 @@ nav ul{
     font-size: 1em;
     font-weight: 700;
     color: #0f172a;
-    gap: 10%;
     margin: 0;
 }
 
@@ -504,12 +644,11 @@ nav ul{
     transform: translateY(-2px);
 }
 
-      /* LISTE PATIENT */
-
 .liste-patient {
     background-color: white;
     border-radius: 1em;
-    padding: 5%;
+    padding: 2.5%;
+    width: 38%;
     display: flex;
     flex-direction: column;
     gap: 0.8em;
@@ -556,4 +695,373 @@ nav ul{
 .liste-patient button:hover {
     border: 1px solid #94a3b8;
     transform: translateY(-2px);
+}
+
+
+
+           /* ci ce trouve les ci ce trouve les style de la responsive en fonction des ecrant */
+
+
+         /*  GRANDS ÉCRANS  (min-width: 1281px) */
+
+@media (min-width: 1281px) {
+
+    header {
+        padding: 10px 7%;
+    }
+
+    header img {
+        width: 160px;
+        height: 160px;
+    }
+
+    nav ul {
+        gap: 40px;
+        font-size: 1.1em;
+    }
+
+    .titre {
+        font-size: 1.7em;
+        padding: 2% 5%;
+    }
+
+    .bleu-vert {
+        padding: 0 5%;
+        gap: 3%;
+    }
+
+    .block-bleue,
+    .block-vert,
+    .block-violet {
+        width: 26%;
+        padding: 1.8rem;
+    }
+
+    .block-bleue h1,
+    .block-vert h1,
+    .block-violet h1 {
+        font-size: 3.5em;
+    }
+
+    .carte-rendezvous {
+        margin: 2% 6%;
+        padding: 3% 5%;
+    }
+
+    .carte-rendezvous h2 {
+        font-size: 2em;
+    }
+
+    .disponible,
+    .liste-patient {
+        width: 35%;
+    }
+}
+
+
+
+       /* PC PORTABLE  (769px - 1024px) */
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul {
+        gap: 16px;
+        font-size: 0.95em;
+    }
+
+    .titre {
+        font-size: 1.2em;
+    }
+
+    .bleu-vert {
+        gap: 3%;
+        padding: 0 3%;
+    }
+
+    .block-bleue,
+    .block-vert,
+    .block-violet {
+        width: 30%;
+    }
+
+    .block-bleue h1,
+    .block-vert h1,
+    .block-violet h1 {
+        font-size: 2.4em;
+    }
+
+    .carte-rendezvous {
+        margin: 2% 3%;
+        padding: 3%;
+    }
+
+    .disponible,
+    .liste-patient {
+        width: 44%;
+    }
+}
+
+       /* BURGER — Tablette + Mobile (max 768px) */
+
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex;
+    }
+
+    #mainNav {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 260px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.12);
+        z-index: 150;
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        padding-top: 80px;
+    }
+
+    #mainNav.ouvert {
+        right: 0;
+    }
+
+    #mainNav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    #mainNav ul li {
+        width: 100%;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    #mainNav ul li a {
+        display: block;
+        padding: 16px 24px;
+        font-weight: 500;
+        color: #0f172a;
+        transition: background 0.2s ease, padding-left 0.2s ease;
+    }
+
+    #mainNav ul li a:hover {
+        background-color: #f8fafc;
+        padding-left: 32px;
+        color: blue;
+    }
+
+    #mainNav ul li a.yeo {
+        background-color: orange;
+        color: white;
+        font-weight: bold;
+        border-radius: 0;
+    }
+
+    #mainNav ul li a.yeo:hover {
+        background-color: #e67e00;
+        padding-left: 32px;
+    }
+
+    header img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+       /* TABLETTE  (481px - 768px)*/
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    header {
+        padding: 10px 4%;
+    }
+
+    .mini-bloc {
+        padding: 1.2rem;
+    }
+
+    .titre {
+        font-size: 1.1em;
+        padding: 3%;
+    }
+
+    .bleu-vert {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 0 5%;
+    }
+
+    .block-bleue,
+    .block-vert,
+    .block-violet {
+        width: 85%;
+    }
+
+    .block-bleue h1,
+    .block-vert h1,
+    .block-violet h1 {
+        font-size: 2.5em;
+    }
+
+    .carte-rendezvous {
+        margin: 3%;
+        padding: 4%;
+    }
+
+    .carte-rendezvous h2 {
+        font-size: 1.4em;
+    }
+
+    .broubi {
+        flex-wrap: wrap;
+        padding: 3%;
+    }
+
+    .bouton1 {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .bouton-lien {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 3%;
+    }
+
+    .disponible,
+    .liste-patient {
+        width: 88%;
+    }
+}
+
+
+        /* MOBILE  (320px - 480px) */
+
+
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .mini-bloc {
+        padding: 0.8rem;
+    }
+
+    .titre {
+        font-size: 0.95em;
+        padding: 3% 2%;
+    }
+
+    .titre h1 {
+        font-size: 1.2em;
+    }
+
+    .bleu-vert {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0 2%;
+    }
+
+    .block-bleue,
+    .block-vert,
+    .block-violet {
+        width: 100%;
+        border-radius: 14px;
+        padding: 1.1rem;
+    }
+
+    .block-bleue h1,
+    .block-vert h1,
+    .block-violet h1 {
+        font-size: 2.2em;
+    }
+
+    .carte-rendezvous {
+        margin: 3% 2%;
+        padding: 5% 4%;
+        border-radius: 0.8em;
+    }
+
+    .carte-rendezvous h2 {
+        font-size: 1.25em;
+    }
+
+    .coullissage {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .coullissage span {
+        padding: 0.4em 0.65em;
+        font-size: 0.76em;
+    }
+
+    .broubi {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 4%;
+        gap: 0.6em;
+    }
+
+    .initial {
+        width: 2.1em;
+        height: 2.1em;
+        font-size: 1em !important;
+    }
+
+    .Nom {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .bouton1 {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .blanc,
+    .rouge {
+        flex: 1;
+        text-align: center;
+        font-size: 0.78em;
+        padding: 0.5em;
+    }
+
+    .bouton-lien {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 3% 2%;
+    }
+
+    .disponible,
+    .liste-patient {
+        width: 100%;
+        border-radius: 0.8em;
+        padding: 5%;
+    }
 }

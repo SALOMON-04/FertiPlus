@@ -1,20 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #FFF5E6;
 }
 
-         /* Ici ce trouve les modification du header */
-         
-header  {
-   display: flex;
-   justify-content: space-around;
-   gap: 20%;
-   font-size: 1.2em;
+body.menu-ouvert {
+    overflow: hidden;
+}
 
+         /* Ici ce trouve les modification du header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    font-size: 1.2em;
 }
 
 header a {
@@ -28,40 +33,238 @@ header a:hover {
 
 header img {
     border-radius: 20%;
-    width: 150px;
-    height: 150px;
-    
+    width: 130px;
+    height: 130px;
 }
 
-nav ul{
+nav ul {
     display: flex;
-  margin-top: 10%;
-  gap: 30px;
-  list-style: none;
-  transform: translate(-5%);
-  
-
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin-top: 0;
 }
 
-.yeo{
+nav ul li a i {
+    color: #C2763A;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover i {
+    color: #E8943A;
+}
+
+.yeo {
     background-color: orange;
-    padding: 80%;
+    padding: 0.45em 0.75em;
     border-radius: 100%;
     font-weight: bold;
     color: white;
 }
 
+        /* Ici ce trouve le style de mon Burger */
+
+
+/*  BURGER BOUTON  */
+
+.burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #fdf3d6, #fff0c2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 200;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.burger:hover {
+    transform: scale(1.07);
+}
+
+.burger i {
+    font-size: 1.3em;
+    color: #C2763A;
+    transition: transform 0.3s ease;
+}
+
+
+/*  EN-TÊTE DU MENU MOBILE  */
+
+.nav-header {
+    display: none;
+}
+
+
+/* OVERLAY */
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 149;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-overlay.visible {
+    display: block;
+    opacity: 1;
+}
+
+      /*  BURGER */
+
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex;
+    }
+
+    #mainNav {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 290px;
+        height: 100vh;
+        background: linear-gradient(160deg, #acdcff 0%, #fff1c9 60%, #fcecbd 100%);
+        z-index: 150;
+        transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    #mainNav.ouvert {
+        right: 0;
+    }
+
+    /* En-tête du menu avec logo + bouton fermer */
+
+    .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .burger-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .burger-close:hover {
+        background: rgba(255, 255, 255, 0.28);
+        transform: rotate(90deg);
+    }
+
+    .burger-close i {
+        color: rgb(0, 0, 0);
+        font-size: 1.1em;
+    }
+
+    /* Liste des liens */
+
+    #mainNav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 16px 12px;
+        margin-top: 0;
+        list-style: none;
+    }
+
+    #mainNav ul li {
+        width: 100%;
+    }
+
+    #mainNav ul li a {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 13px 16px;
+        border-radius: 12px;
+        font-size: 0.97em;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    #mainNav ul li a i {
+        font-size: 1.1em;
+        width: 22px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.2s ease;
+    }
+
+    #mainNav ul li a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        padding-left: 22px;
+    }
+
+    #mainNav ul li a:hover i {
+        color: white;
+    }
+
+    /* Avatar AY */
+
+    #mainNav ul li a.yeo {
+        background: rgba(255, 165, 0, 0.25);
+        border: 1px solid rgba(255, 165, 0, 0.5);
+        color: #ffd580;
+        font-weight: bold;
+        margin-top: 8px;
+        justify-content: center;
+        font-size: 1.1em;
+    }
+
+    #mainNav ul li a.yeo:hover {
+        background: rgba(255, 165, 0, 0.4);
+        color: white;
+        padding-left: 16px;
+    }
+}
 
 
          /* style de la classe gestion */
 
 .gestion {
-
-  display: block;
-  padding: 5%;
-  font-size: 1.2em;
+    display: block;
+    padding: 3% 5%;
+    font-size: 1.2em;
 }
 
+.gestion h1 {
+    font-weight: 700;
+    color: #111;
+}
+
+.gestion span {
+    color: #555;
+    font-size: 0.85em;
+}
 
 
          /* modification de la section agenda    */
@@ -74,7 +277,6 @@ nav ul{
     flex-direction: column;
     gap: 1.5em;
     padding: 2% 8%;
-   
 }
 
      /* BARRE DE RECHERCHE */
@@ -82,7 +284,7 @@ nav ul{
 .recherche-bar {
     background-color: white;
     border-radius: 1em;
-    padding: 2% ;
+    padding: 2%;
     display: flex;
     align-items: center;
     gap: 1em;
@@ -140,7 +342,6 @@ nav ul{
     display: flex;
     justify-content: center;
     gap: 4%;
-  
 }
 
 .numero {
@@ -175,8 +376,8 @@ nav ul{
 .orange { color: #e07b00; }
 .rouge  { color: #ef4444; }
 
-      
-        /* LISTE RENEZ-VOUS */
+
+        /* LISTE RENDEZ-VOUS */
 
 .liste-rdv {
     background-color: white;
@@ -267,7 +468,6 @@ nav ul{
 }
 
 
-
       /* BADGES STATUT */
 
 .badge-avenir {
@@ -316,4 +516,266 @@ nav ul{
     background-color: #1e293b;
     transform: translateY(-2px);
 }
-        
+
+
+           /* ci ce trouve les style de la responsive en fonction des ecrant */
+
+
+         /*  GRANDS ÉCRANS  (min-width: 1281px) */
+
+@media (min-width: 1281px) {
+
+    header {
+        padding: 10px 7%;
+    }
+
+    header img {
+        width: 160px;
+        height: 160px;
+    }
+
+    nav ul {
+        gap: 40px;
+        font-size: 1.1em;
+    }
+
+    .gestion {
+        padding: 2% 7%;
+        font-size: 1.4em;
+    }
+
+    .agenda {
+        padding: 2% 10%;
+    }
+
+    .recherche-bar {
+        width: 75%;
+    }
+
+    .numero {
+        width: 8%;
+        padding: 3%;
+    }
+
+    .liste-rdv {
+        width: 60%;
+        padding: 5%;
+    }
+}
+
+
+       /* PC PORTABLE  (769px - 1024px) */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul {
+        gap: 16px;
+        font-size: 0.95em;
+    }
+
+    .gestion {
+        padding: 3% 4%;
+    }
+
+    .agenda {
+        padding: 2% 5%;
+    }
+
+    .recherche-bar {
+        width: 90%;
+    }
+
+    .numero {
+        width: 14%;
+    }
+
+    .liste-rdv {
+        width: 82%;
+        padding: 5%;
+    }
+}
+
+
+       /* BURGER — Tablette + Mobile (max 768px) */
+
+@media (max-width: 768px) {
+
+    header img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .gestion {
+        padding: 4% 4%;
+        font-size: 1em;
+    }
+
+    .agenda {
+        padding: 2% 4%;
+        gap: 1.2em;
+    }
+
+    .recherche-bar {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 3%;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .select {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .numero {
+        width: 20%;
+        padding: 3%;
+    }
+
+    .numero h1 {
+        font-size: 1.6em;
+    }
+
+    .numero span {
+        font-size: 0.75em;
+    }
+
+    .liste-rdv {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .rdv-item {
+        font-size: 1em;
+    }
+}
+
+
+       /* TABLETTE  (481px - 768px) */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .mini-block {
+        gap: 3%;
+    }
+
+    .numero {
+        width: 18%;
+    }
+
+    .liste-rdv {
+        width: 100%;
+        padding: 4%;
+    }
+}
+
+
+        /* MOBILE  (320px - 480px) */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .gestion {
+        padding: 5% 4%;
+        font-size: 0.95em;
+    }
+
+    .gestion h1 {
+        font-size: 1.2em;
+    }
+
+    .agenda {
+        padding: 2% 3%;
+        gap: 1em;
+    }
+
+    .recherche-bar {
+        width: 100%;
+        flex-direction: column;
+        padding: 4%;
+        gap: 0.8em;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .select {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .mini-block {
+        gap: 2%;
+    }
+
+    .numero {
+        width: 22%;
+        padding: 3% 2%;
+    }
+
+    .numero h1 {
+        font-size: 1.4em;
+    }
+
+    .numero span {
+        font-size: 0.65em;
+    }
+
+    .liste-rdv {
+        width: 100%;
+        padding: 4%;
+        border-radius: 0.8em;
+    }
+
+    .liste-rdv h2 {
+        font-size: 1.2em;
+    }
+
+    .sous-titre-rdv {
+        font-size: 0.8em;
+    }
+
+    .rdv-item {
+        flex-wrap: wrap;
+        font-size: 0.95em;
+        padding: 4%;
+        gap: 0.7em;
+    }
+
+    .rdv-nom-statut {
+        flex-wrap: wrap;
+        gap: 0.4em;
+    }
+
+    .rdv-details {
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+
+    .btn-voir {
+        width: 100%;
+        text-align: center;
+        padding: 0.7em;
+    }
+}

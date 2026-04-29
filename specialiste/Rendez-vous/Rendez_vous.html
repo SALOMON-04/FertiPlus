@@ -14,16 +14,51 @@
 
     <header>
         <img src="../../images/Total Protect (1).png" alt="logo">
-        <nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars" id="burgerIcon"></i>
+        </button>
+
+        <nav id="mainNav">
+            <div class="nav-header">
+                <img src="../../images/Total Protect (1).png" alt="logo">
+                <button class="burger-close" id="burgerClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
             <ul>
-                <li><a href="../tableau_de_bord.html">Tableau de bord</a></li>
-                <li><a href="">Rendez-vous</a></li>
-                <li><a href="../Patient/Patient.html">Patient</a></li>
-                <li><a href="../Disponible/Disponibilite.html">disponibilité</a></li>
-                <li><a class="yeo" href="">AY</a></li>
+                <li>
+                    <a href="../tableau_de_bord.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Tableau de bord</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Rendez-vous</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Patient/Patient.html">
+                        <i class="fa-solid fa-user-injured"></i>
+                        <span>Patient</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Disponible/Disponibilite.html">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Disponibilité</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="yeo" href="">AY</a>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
 
 
 
@@ -34,142 +69,165 @@
 
 
 
-<section class="agenda">
+    <section class="agenda">
 
-    <!-- Barre de recherche -->
-    <div class="recherche-bar">
+        <!-- Barre de recherche -->
+        <div class="recherche-bar">
 
-        <div class="search-input">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Rechercher par patient, ID ou motif...">
-        </div>
-
-        <div class="select">
-            <span>Tous les statuts</span>
-            <i class="fa-solid fa-chevron-down"></i>
-        </div>
-
-    </div>
-
-    <!-- Stats -->
-    <div class="mini-block">
-
-        <div class="numero">
-            <h1 class="bleue">3</h1>
-            <span>À venir</span>
-        </div>
-
-        <div class="numero">
-            <h1 class="vert">1</h1>
-            <span>Terminé</span>
-        </div>
-
-        <div class="numero">
-            <h1 class="orange">1</h1>
-            <span>En cours</span>
-        </div>
-
-        <div class="numero">
-            <h1 class="rouge">1</h1>
-            <span>Annulée</span>
-        </div>
-
-    </div>
-
-    <!-- Liste des rendez-vous -->
-    <div class="liste-rdv">
-
-        <h2>Listes des rendez-vous</h2>
-        <span class="sous-titre-rdv">Cliquez sur un rendez-vous pour voir les détails</span>
-
-        <!-- RDV 1 : À venir -->
-        <div class="rdv-item">
-            <span class="rdv-initial">BN</span>
-            <div class="rdv-info">
-                <div class="rdv-nom-statut">
-                    <h3>Broubi Léontine</h3>
-                    <span class="badge-avenir">À venir</span>
-                </div>
-                <span class="rdv-type">Consultation Gynécologique</span>
-                <div class="rdv-details">
-                    <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
-                    <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
-                </div>
+            <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Rechercher par patient, ID ou motif...">
             </div>
-            <button type="button" class="btn-voir">Voir détails</button>
-        </div>
 
-        <!-- RDV 2 : Terminé -->
-        <div class="rdv-item">
-            <span class="rdv-initial">BN</span>
-            <div class="rdv-info">
-                <div class="rdv-nom-statut">
-                    <h3>Broubi Léontine</h3>
-                    <span class="badge-termine">Terminé</span>
-                </div>
-                <span class="rdv-type">Consultation Gynécologique</span>
-                <div class="rdv-details">
-                    <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
-                    <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
-                </div>
+            <div class="select">
+                <span>Tous les statuts</span>
+                <i class="fa-solid fa-chevron-down"></i>
             </div>
-            <button type="button" class="btn-voir">Voir détails</button>
+
         </div>
 
-        <!-- RDV 3 : Annulé -->
-        <div class="rdv-item">
-            <span class="rdv-initial">BN</span>
-            <div class="rdv-info">
-                <div class="rdv-nom-statut">
-                    <h3>Broubi Léontine</h3>
-                    <span class="badge-annule">Annulé</span>
-                </div>
-                <span class="rdv-type">Consultation Gynécologique</span>
-                <div class="rdv-details">
-                    <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
-                    <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
-                </div>
+        <!-- Stats -->
+        <div class="mini-block">
+
+            <div class="numero">
+                <h1 class="bleue">3</h1>
+                <span>À venir</span>
             </div>
-            <button type="button" class="btn-voir">Voir détails</button>
-        </div>
 
-        <!-- RDV 4 : À venir -->
-        <div class="rdv-item">
-            <span class="rdv-initial">BN</span>
-            <div class="rdv-info">
-                <div class="rdv-nom-statut">
-                    <h3>Broubi Léontine</h3>
-                    <span class="badge-avenir">À venir</span>
-                </div>
-                <span class="rdv-type">Consultation Gynécologique</span>
-                <div class="rdv-details">
-                    <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
-                    <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
-                </div>
+            <div class="numero">
+                <h1 class="vert">1</h1>
+                <span>Terminé</span>
             </div>
-            <button type="button" class="btn-voir">Voir détails</button>
-        </div>
 
-        <!-- RDV 5 : À venir -->
-        <div class="rdv-item">
-            <span class="rdv-initial">BN</span>
-            <div class="rdv-info">
-                <div class="rdv-nom-statut">
-                    <h3>Broubi Léontine</h3>
-                    <span class="badge-avenir">À venir</span>
-                </div>
-                <span class="rdv-type">Consultation Gynécologique</span>
-                <div class="rdv-details">
-                    <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
-                    <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
-                </div>
+            <div class="numero">
+                <h1 class="orange">1</h1>
+                <span>En cours</span>
             </div>
-            <button type="button" class="btn-voir">Voir détails</button>
+
+            <div class="numero">
+                <h1 class="rouge">1</h1>
+                <span>Annulée</span>
+            </div>
+
         </div>
 
-    </div>
+        <!-- Liste des rendez-vous -->
+        <div class="liste-rdv">
 
-</section>
+            <h2>Listes des rendez-vous</h2>
+            <span class="sous-titre-rdv">Cliquez sur un rendez-vous pour voir les détails</span>
+
+            <!-- RDV 1 : À venir -->
+            <div class="rdv-item">
+                <span class="rdv-initial">BN</span>
+                <div class="rdv-info">
+                    <div class="rdv-nom-statut">
+                        <h3>Broubi Léontine</h3>
+                        <span class="badge-avenir">À venir</span>
+                    </div>
+                    <span class="rdv-type">Consultation Gynécologique</span>
+                    <div class="rdv-details">
+                        <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
+                        <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
+                    </div>
+                </div>
+                <button type="button" class="btn-voir">Voir détails</button>
+            </div>
+
+            <!-- RDV 2 : Terminé -->
+            <div class="rdv-item">
+                <span class="rdv-initial">BN</span>
+                <div class="rdv-info">
+                    <div class="rdv-nom-statut">
+                        <h3>Broubi Léontine</h3>
+                        <span class="badge-termine">Terminé</span>
+                    </div>
+                    <span class="rdv-type">Consultation Gynécologique</span>
+                    <div class="rdv-details">
+                        <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
+                        <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
+                    </div>
+                </div>
+                <button type="button" class="btn-voir">Voir détails</button>
+            </div>
+
+            <!-- RDV 3 : Annulé -->
+            <div class="rdv-item">
+                <span class="rdv-initial">BN</span>
+                <div class="rdv-info">
+                    <div class="rdv-nom-statut">
+                        <h3>Broubi Léontine</h3>
+                        <span class="badge-annule">Annulé</span>
+                    </div>
+                    <span class="rdv-type">Consultation Gynécologique</span>
+                    <div class="rdv-details">
+                        <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
+                        <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
+                    </div>
+                </div>
+                <button type="button" class="btn-voir">Voir détails</button>
+            </div>
+
+            <!-- RDV 4 : À venir -->
+            <div class="rdv-item">
+                <span class="rdv-initial">BN</span>
+                <div class="rdv-info">
+                    <div class="rdv-nom-statut">
+                        <h3>Broubi Léontine</h3>
+                        <span class="badge-avenir">À venir</span>
+                    </div>
+                    <span class="rdv-type">Consultation Gynécologique</span>
+                    <div class="rdv-details">
+                        <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
+                        <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
+                    </div>
+                </div>
+                <button type="button" class="btn-voir">Voir détails</button>
+            </div>
+
+            <!-- RDV 5 : À venir -->
+            <div class="rdv-item">
+                <span class="rdv-initial">BN</span>
+                <div class="rdv-info">
+                    <div class="rdv-nom-statut">
+                        <h3>Broubi Léontine</h3>
+                        <span class="badge-avenir">À venir</span>
+                    </div>
+                    <span class="rdv-type">Consultation Gynécologique</span>
+                    <div class="rdv-details">
+                        <span><i class="fa-regular fa-calendar"></i> 10/04/2026</span>
+                        <span><i class="fa-regular fa-clock"></i> 9 H 00</span>
+                    </div>
+                </div>
+                <button type="button" class="btn-voir">Voir détails</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script>
+        const burgerBtn = document.getElementById('burgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function toggleMenu() {
+            burgerBtn.classList.toggle('actif');
+            mainNav.classList.toggle('ouvert');
+            navOverlay.classList.toggle('visible');
+            document.body.classList.toggle('menu-ouvert');
+        }
+
+        burgerBtn.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('ouvert')) toggleMenu();
+            });
+        });
+    </script>
 
 </body>
 
