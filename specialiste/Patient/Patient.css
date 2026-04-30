@@ -653,3 +653,273 @@ nav ul{
     border: 1px solid #94a3b8;
     transform: translateY(-2px);
 }
+
+
+
+
+
+
+
+      /* ici ce trouve l'adaptation de la page aux ecrants */
+
+
+
+
+
+       /* TABLETTE (max 1024px) */
+
+@media (max-width: 1024px) {
+
+
+
+    /* HEADER */
+
+    header {
+        gap: 5%;
+        padding: 0 2%;
+    }
+
+    header img {
+        width: 110px;
+        height: 110px;
+    }
+
+    nav ul {
+        gap: 18px;
+        margin-top: 12%;
+    }
+
+
+
+    /* MINI BLOCKS */
+
+    .mini-block {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 3% 4%;
+    }
+
+    .violet,
+    .vert,
+    .bleue,
+    .rouge {
+        width: 40%;
+        padding: 5%;
+    }
+
+
+
+    /* BARRE DE RECHERCHE */
+
+    .barre-recherche {
+        width: 92%;
+    }
+
+
+
+    /* LISTE PATIENTS */
+
+    .liste-patients {
+        margin: 2% 3%;
+    }
+
+
+    /* DOSSIER PATIENT (modal) */
+
+    .dossier-patient {
+        width: 70%;
+    }
+}
+
+
+      /* MOBILE (max 768px) */
+
+@media (max-width: 768px) {
+
+
+
+    /* HEADER */
+
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0;
+        gap: 12px;
+        transform: none;
+        padding: 0 10px 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .yeo {
+        padding: 10px 14px;
+    }
+
+
+
+    /* TITRE */
+
+
+    .titre {
+        padding: 4% 5%;
+        font-size: 1.2em;
+    }
+
+
+
+
+    /* MINI BLOCKS */
+
+
+    .mini-block {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 4% 5%;
+        justify-content: center;
+    }
+
+    .violet,
+    .vert,
+    .bleue,
+    .rouge {
+        width: 42%;
+        padding: 6%;
+        border-radius: 0.8em;
+    }
+
+    .Nom h2 {
+        font-size: 1.6em !important;
+    }
+
+    .violet i,
+    .vert i,
+    .bleue i,
+    .rouge i {
+        font-size: 2em;
+    }
+
+
+
+    /* BARRE DE RECHERCHE */
+
+    .barre-recherche {
+        width: 95%;
+        padding: 3%;
+    }
+
+
+    /* LISTE PATIENTS */
+
+
+    .liste-patients {
+        margin: 3% 3%;
+        padding: 5%;
+    }
+
+
+
+
+    /* PATIENT ITEM */
+
+    .patient-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8em;
+        padding: 4%;
+    }
+
+    .patient-meta {
+        flex-direction: column;
+        gap: 0.4em;
+    }
+
+    .btn-dossier {
+        width: 100%;
+        text-align: center;
+        padding: 0.8em;
+    }
+
+
+
+    /* DOSSIER PATIENT (modal) */ 
+
+
+    .dossier-patient {
+        width: 92%;
+        padding: 6%;
+    }
+
+    .dossier-grille {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8em;
+    }
+
+    .dossier-boutons {
+        flex-direction: column;
+        gap: 0.8em;
+    }
+
+    .btn-rdv-dossier,
+    .btn-note-dossier {
+        width: 100%;
+    }
+
+    .onglet-dossier {
+        font-size: 0.8em;
+        padding: 0.6em 0.3em;
+    }
+}
+
+
+
+
+      /*PETIT MOBILE (max 480px)*/
+
+@media (max-width: 480px) {
+
+    /* MINI BLOCKS : 1 colonne */
+
+    .violet,
+    .vert,
+    .bleue,
+    .rouge {
+        width: 85%;
+    }
+
+    /* HEADER */
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 0.8em;
+    }
+
+    /* DOSSIER */
+
+    .dossier-grille {
+        grid-template-columns: 1fr;
+    }
+
+    .historique-entete {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3em;
+    }
+}

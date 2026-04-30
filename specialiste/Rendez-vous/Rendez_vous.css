@@ -57,7 +57,8 @@ nav ul li a:hover i {
 .yeo {
     background-color: orange;
     padding: 0.45em 0.75em;
-    border-radius: 100%;
+    border-radius: 80%;
+    width: 90%;
     font-weight: bold;
     color: white;
 }
@@ -143,6 +144,8 @@ nav ul li a:hover i {
         right: 0;
     }
 
+
+
     /* En-tête du menu avec logo + bouton fermer */
 
     .nav-header {
@@ -150,6 +153,7 @@ nav ul li a:hover i {
         align-items: center;
         justify-content: space-between;
         padding: 20px 20px 16px;
+        margin-top: 30%;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
 
@@ -166,7 +170,7 @@ nav ul li a:hover i {
         width: 36px;
         height: 36px;
         background: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255,255,255,0.25);
         border-radius: 10px;
         cursor: pointer;
         transition: background 0.2s ease, transform 0.2s ease;
@@ -187,25 +191,26 @@ nav ul li a:hover i {
     #mainNav ul {
         flex-direction: column;
         align-items: flex-start;
-        gap: 4px;
-        padding: 16px 12px;
+        gap: 0px;
         margin-top: 0;
         list-style: none;
     }
 
     #mainNav ul li {
         width: 100%;
+       border: 0.1px solid white;
+     
     }
 
     #mainNav ul li a {
         display: flex;
         align-items: center;
         gap: 14px;
-        padding: 13px 16px;
-        border-radius: 12px;
+        border-radius: 1px;
+        padding: 16px 12px;
         font-size: 0.97em;
         font-weight: 500;
-        color: rgba(255, 255, 255, 0.85);
+        color: rgba(0, 0, 0, 0.85);
         text-decoration: none;
         transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
     }
@@ -213,14 +218,15 @@ nav ul li a:hover i {
     #mainNav ul li a i {
         font-size: 1.1em;
         width: 22px;
+        margin-left: 5%;
         text-align: center;
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 136, 0, 0.7);
         transition: color 0.2s ease;
     }
 
     #mainNav ul li a:hover {
         background: rgba(255, 255, 255, 0.15);
-        color: white;
+        color: rgb(255, 255, 255);
         padding-left: 22px;
     }
 
@@ -231,20 +237,29 @@ nav ul li a:hover i {
     /* Avatar AY */
 
     #mainNav ul li a.yeo {
-        background: rgba(255, 165, 0, 0.25);
-        border: 1px solid rgba(255, 165, 0, 0.5);
-        color: #ffd580;
+        background: rgb(255, 166, 0);
+        color: #ffffff;
         font-weight: bold;
         margin-top: 8px;
-        justify-content: center;
+       
         font-size: 1.1em;
+        
+    }
+
+
+    .yeo span {
+        margin-left: 5%;
     }
 
     #mainNav ul li a.yeo:hover {
-        background: rgba(255, 165, 0, 0.4);
-        color: white;
+        background: rgba(255, 255, 255, 0.4);
+        color: rgb(255, 255, 255);
         padding-left: 16px;
     }
+
+
+
+
 }
 
 
@@ -663,9 +678,13 @@ nav ul li a:hover i {
 }
 
 
-       /* TABLETTE  (481px - 768px) */
+       /* TABLETTE  (481px - 768px)*/
 
 @media (min-width: 481px) and (max-width: 768px) {
+
+    header {
+        padding: 10px 4%;
+    }
 
     .mini-block {
         gap: 3%;
