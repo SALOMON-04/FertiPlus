@@ -29,7 +29,7 @@ header a:hover {
 header img {
     border-radius: 20%;
     width: 150px;
-    height: 150px;
+    height: 120px;
     
 }
 
@@ -51,6 +51,215 @@ nav ul{
     color: white;
 }
 
+
+
+
+
+          /* Ici ce trouve le style de mon Burger */
+
+
+/*  BURGER BOUTON  */
+
+.burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #fdf3d6, #fff0c2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 200;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.burger:hover {
+    transform: scale(1.07);
+}
+
+.burger i {
+    font-size: 1.3em;
+    color: #C2763A;
+    transition: transform 0.3s ease;
+}
+
+
+/*  EN-TÊTE DU MENU MOBILE  */
+
+.nav-header {
+    display: none;
+}
+
+
+/* OVERLAY */
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 149;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-overlay.visible {
+    display: block;
+    opacity: 1;
+}
+
+      /*  BURGER */
+
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex;
+    }
+
+    #mainNav {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 290px;
+        height: 100vh;
+        background: linear-gradient(160deg, #acdcff 0%, #fff1c9 60%, #fcecbd 100%);
+        z-index: 150;
+        transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    #mainNav.ouvert {
+        right: 0;
+    }
+
+
+
+    /* En-tête du menu avec logo + bouton fermer */
+
+    .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 16px;
+        margin-top: 30%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .burger-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .burger-close:hover {
+        background: rgba(255, 255, 255, 0.28);
+        transform: rotate(90deg);
+    }
+
+    .burger-close i {
+        color: rgb(0, 0, 0);
+        font-size: 1.1em;
+    }
+
+    /* Liste des liens */
+
+    #mainNav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        margin-top: 0;
+        list-style: none;
+       
+
+    }
+
+    #mainNav ul li {
+        width: 100%;
+       border: 0.1px solid white;
+        display: block;
+        justify-content: center;
+       padding: 0;
+       margin-left: 5%;
+    
+          
+    }
+
+    #mainNav ul li a {
+        display: flex;
+        align-items: center;
+        gap: 10%;
+        border-radius: 1px;
+        padding: 16px 12px;
+        font-size: 0.97em;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.85);
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    #mainNav ul li a i {
+        font-size: 1.1em;
+        width: 22px;
+        margin-left: 5%;
+        text-align: center;
+        color: rgba(255, 136, 0, 0.7);
+        transition: color 0.2s ease;
+    }
+
+    #mainNav ul li a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: rgb(255, 255, 255);
+        padding-left: 22px;
+    }
+
+    #mainNav ul li a:hover i {
+        color: white;
+    }
+
+    /* Avatar AY */
+
+    #mainNav ul li a.yeo {
+        background: rgb(255, 166, 0);
+        color: #ffffff;
+        font-weight: bold;
+        margin-top: 8px;
+       width: 75%;
+        font-size: 1.1em;
+        
+    }
+
+
+    .yeo span {
+        margin-left: 5%;
+    }
+
+    #mainNav ul li a.yeo:hover {
+        background: rgba(255, 255, 255, 0.4);
+        color: rgb(255, 255, 255);
+        padding-left: 16px;
+    }
+
+
+
+
+}
 
 
 
@@ -449,4 +658,226 @@ nav ul{
 .btn-action:hover {
     border: 1px solid #94a3b8;
     transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+    /* Ici ce trouve la responsive de chaque type d'ecran */
+
+
+    
+
+     /* GRANDS ÉCRANS (min 1281px) */
+ 
+@media (min-width: 1281px) {
+ 
+    header {
+        padding: 10px 7%;
+    }
+ 
+    header img {
+        width: 160px;
+        height: 160px;
+    }
+ 
+    nav ul {
+        gap: 40px;
+        font-size: 1.1em;
+    }
+ 
+    .disponible {
+        padding: 2% 7%;
+        font-size: 1.4em;
+    }
+ 
+    .Horaire {
+        padding: 2% 7%;
+    }
+}
+
+
+
+ 
+     /*PC PORTABLE (769px - 1280px) */
+
+ 
+@media (min-width: 769px) and (max-width: 1280px) {
+ 
+    header {
+        padding: 8px 4%;
+    }
+ 
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+ 
+    nav ul {
+        gap: 16px;
+        font-size: 0.95em;
+    }
+ 
+    .disponible {
+        padding: 3% 4%;
+        font-size: 1.1em;
+    }
+ 
+    .Horaire {
+        padding: 2% 4%;
+        gap: 2%;
+    }
+ 
+    .gauche {
+        width: 62%;
+    }
+ 
+    .droite {
+        width: 36%;
+    }
+}
+ 
+
+
+
+      /* TABLETTE (481px - 768px) */
+
+ 
+@media (min-width: 481px) and (max-width: 768px) {
+ 
+
+    header{
+        display: flex;
+        justify-content: space-around;
+        gap: 65%;
+        align-items: center;
+        
+
+    }
+
+
+    .disponible {
+        padding: 4% 4%;
+        font-size: 1em;
+    }
+ 
+    .Horaire {
+        flex-direction: column;
+        padding: 2% 4%;
+        gap: 1.5em;
+    }
+ 
+    .gauche {
+        width: 100%;
+    }
+ 
+    .droite {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+ 
+    .resume,
+    .parametres-consultation,
+    .actions-rapides {
+        flex: 1;
+        min-width: 45%;
+    }
+ 
+    .plage,
+    .plage-select {
+        flex-wrap: wrap;
+        gap: 0.6em;
+    }
+ 
+    .btn-ajouter-plage {
+        font-size: 0.8em;
+        padding: 0.4em 0.7em;
+    }
+}
+
+
+
+
+ 
+   /*  MOBILE (max 480px) */
+ 
+@media (max-width: 480px) {
+ 
+    header {
+        padding: 8px 4%;
+    }
+ 
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+ 
+    .disponible {
+        padding: 5% 4%;
+        font-size: 0.95em;
+    }
+ 
+    .disponible h1 {
+        font-size: 1.2em;
+    }
+ 
+    .Horaire {
+        flex-direction: column;
+        padding: 2% 3%;
+        gap: 1em;
+    }
+ 
+    .gauche {
+        width: 100%;
+    }
+ 
+    .droite {
+        width: 100%;
+    }
+ 
+    .plannig,
+    .jourferme {
+        padding: 5%;
+    }
+ 
+    .plage,
+    .plage-select {
+        flex-wrap: wrap;
+        gap: 0.6em;
+        padding: 4%;
+    }
+ 
+    .plage-selection select {
+        font-size: 0.9em;
+    }
+ 
+    .entete {
+        flex-wrap: wrap;
+        gap: 0.6em;
+    }
+ 
+    .btn-ajouter-plage {
+        width: 100%;
+        text-align: center;
+        font-size: 0.85em;
+    }
+ 
+    .resume-statistiques {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+ 
+    .heure-total {
+        font-size: 1.6em;
+    }
+ 
+    .btn-action {
+        padding: 0.9em;
+        font-size: 0.8em;
+    }
 }

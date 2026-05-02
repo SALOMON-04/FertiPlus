@@ -1,3 +1,33 @@
+
+// Dynamisme du burger
+
+const burgerBtn = document.getElementById('burgerBtn');
+const mainNav = document.getElementById('mainNav');
+const navOverlay = document.getElementById('navOverlay');
+
+function toggleMenu() {
+    burgerBtn.classList.toggle('actif');
+    mainNav.classList.toggle('ouvert');
+    navOverlay.classList.toggle('visible');
+    document.body.classList.toggle('menu-ouvert');
+}
+
+burgerBtn.addEventListener('click', toggleMenu);
+navOverlay.addEventListener('click', toggleMenu);
+
+mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (mainNav.classList.contains('ouvert')) toggleMenu();
+    });
+});
+
+
+
+
+
+//   Dynamisme des ouverture de dossier
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
     /* OUVERTURE / FERMETURE DU DOSSIER */
@@ -52,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-      /*  ONGLETS DU DOSSIER */
+    /*  ONGLETS DU DOSSIER */
 
     const btnInformations = document.getElementById('btn-informations');
     const btnHistorique = document.getElementById('btn-historique');

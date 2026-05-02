@@ -13,17 +13,52 @@
 
 
     <header>
-        <img src="/../../images/Total Protect (1).png" alt="logo">
-        <nav>
+        <img src="/../images/Total Protect (1).png" alt="logo">
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars" id="burgerIcon"></i>
+        </button>
+
+        <nav id="mainNav">
+            <div class="nav-header">
+                <img src="/../images/Total Protect (1).png" alt="logo">
+                <button class="burger-close" id="burgerClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
             <ul>
-                <li><a href="../tableau_de_bord.html">Tableau de bord</a></li>
-                <li><a href="../Rendez-vous/Rendez_vous.html">Rendez-vous</a></li>
-                <li><a href="../Patient/Patient.html">Patient</a></li>
-                <li><a href="">disponibilité</a></li>
-                <li><a class="yeo" href="">AY</a></li>
+                <li>
+                    <a href="../tableau_de_bord.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Tableau de bord</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Rendez-vous/Rendez_vous.html">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Rendez-vous</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Patient/Patient.html">
+                        <i class="fa-solid fa-user-injured"></i>
+                        <span>Patient</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Disponible/Disponibilite.html">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Disponibilité</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="yeo" href=""><span>AY</span></a>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
 
 
 
@@ -369,7 +404,7 @@
 
                         </div>
 
-                       <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
 
                     </div>
 
@@ -400,7 +435,7 @@
 
                         </div>
 
-                       <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
+                        <i class="fa-regular fa-trash-can" style="color: rgb(255, 0, 0); cursor: pointer;"></i>
 
                     </div>
 
@@ -641,6 +676,35 @@
 
     </section>
 
+
+
+     <!-- Dynamisme du burger -->
+
+    <script>
+
+       
+
+        const burgerBtn = document.getElementById('burgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function toggleMenu() {
+            burgerBtn.classList.toggle('actif');
+            mainNav.classList.toggle('ouvert');
+            navOverlay.classList.toggle('visible');
+            document.body.classList.toggle('menu-ouvert');
+        }
+
+        burgerBtn.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('ouvert')) toggleMenu();
+            });
+        });
+
+    </script>
 
 </body>
 

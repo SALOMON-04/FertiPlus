@@ -33,8 +33,8 @@ header a:hover {
 
 header img {
     border-radius: 20%;
-    width: 130px;
-    height: 130px;
+    width: 250px;
+    height: 120px;
 }
 
 nav ul {
@@ -97,6 +97,7 @@ nav ul li a:hover i {
 
 .nav-header {
     display: none;
+
 }
 
 
@@ -625,8 +626,8 @@ nav ul li a:hover i {
 @media (max-width: 768px) {
 
     header img {
-        width: 75px;
-        height: 75px;
+        width: 150px;
+        height: 120px;
     }
 
     .gestion {
@@ -683,7 +684,8 @@ nav ul li a:hover i {
 @media (min-width: 481px) and (max-width: 768px) {
 
     header {
-        padding: 10px 4%;
+        padding: 10px 2%;
+        
     }
 
     .mini-block {

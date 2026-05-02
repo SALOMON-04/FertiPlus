@@ -391,7 +391,7 @@ nav ul li a:hover i {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 28%;
+    width: 26%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -877,8 +877,8 @@ nav ul li a:hover i {
     }
 
     header img {
-        width: 75px;
-        height: 75px;
+        width: 150px;
+        height: 120px;
     }
 }
 
@@ -887,7 +887,7 @@ nav ul li a:hover i {
 @media (min-width: 481px) and (max-width: 768px) {
 
     header {
-        padding: 10px 4%;
+        padding: 10px 2%;
     }
 
     .mini-bloc {
@@ -909,7 +909,7 @@ nav ul li a:hover i {
     .block-bleue,
     .block-vert,
     .block-violet {
-        width: 85%;
+        width: 80%;
     }
 
     .block-bleue h1,
@@ -992,6 +992,10 @@ nav ul li a:hover i {
         width: 100%;
         border-radius: 14px;
         padding: 1.1rem;
+    }
+
+    .block-violet{
+        width: 95%;
     }
 
     .block-bleue h1,
