@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,17 +16,60 @@
 
     <header>
         <img src="../images/Total Protect (1).png" alt="logo">
-        <nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="mainNav">
+            <div class="nav-header">
+                <img src="../images/Total Protect (1).png" alt="logo">
+                <button class="burger-close" id="burgerClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
             <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../Symptome/Symptome.html">Symptome</a></li>
-                <li><a href="../Education/Education.html">Education</a></li>
-                <li><a href="../Suivi/suivi.html">Suivi</a></li>
-                <li><a href="../Consultation/Consultation.html">Consultation</a></li>
-                <li><a href="">Compte</a></li>
+                <li>
+                    <a href="../index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Symptome/Symptome.html">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>Symptome</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Education/Education.html">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Suivi/suivi.html">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Suivi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Consultation/Consultation.html">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>Consultation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Compte</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
 
 
               <!-- stylisayion de la carte connexion -->
@@ -135,7 +179,7 @@
                 <span>Creez votre compte et prenez rendez-vous au plus vite pour augmenter vaut chance de fonder une
                     futur famille</span>
                 <img src="../images/image5.jpg" alt="Un patient qui explique son mal">
-                <h3>+10000 personne on déjà sauté le pas , qu’attendez-vous</h3>
+                <h3>+10000 personne on déjà sauté le pas , qu'attendez-vous</h3>
 
             </div>
 
@@ -410,6 +454,8 @@
 
 
        <script src="Connexion.js"></script>
+
+    
 
 </body>
 

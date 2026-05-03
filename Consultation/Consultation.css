@@ -1,24 +1,40 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #FFF5E6;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.menu-ouvert {
+    overflow: hidden;
 }
 
          /* Ici ce trouve les modification du header */
-         
-header  {
-   display: flex;
-   justify-content: space-around;
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    font-size: 1.1em;
 }
 
 header a {
     text-decoration: none;
     color: black;
 }
+
+header a i {
+    color: #ff9500 !important;
+}
+
 
 header a:hover {
     color: blue;
@@ -30,17 +46,213 @@ header img {
     height: 130px;
 }
 
-nav ul{
+nav ul {
     display: flex;
-  padding: 30px;
-  margin: 20px;
-  gap: 30px;
-  list-style: none;
-  transform: translate(-5%);
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin-top: 0;
+}
 
+nav ul li a i {
+    color: #C2763A;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover i {
+    color: #E8943A;
 }
 
 
+
+        /* Ici ce trouve le style de mon Burger */
+
+
+/*  BURGER BOUTON  */
+
+.burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #fdf3d6, #fff0c2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 200;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.burger:hover {
+    transform: scale(1.07);
+}
+
+.burger i {
+    font-size: 1.3em;
+    color: #C2763A;
+    transition: transform 0.3s ease;
+}
+
+
+/*  EN-TÊTE DU MENU MOBILE  */
+
+.nav-header {
+    display: none;
+}
+
+
+/* OVERLAY */
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 149;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-overlay.visible {
+    display: block;
+    opacity: 1;
+}
+
+      /*  BURGER */
+
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex;
+    }
+
+    #mainNav {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 290px;
+        height: 100vh;
+        background: linear-gradient(160deg, #acdcff 0%, #fff1c9 60%, #fcecbd 100%);
+        z-index: 150;
+        transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    #mainNav.ouvert {
+        right: 0;
+    }
+
+
+
+    /* En-tête du menu avec logo + bouton fermer */
+
+    .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 16px;
+        margin-top: 30%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .burger-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .burger-close:hover {
+        background: rgba(255, 255, 255, 0.28);
+        transform: rotate(90deg);
+    }
+
+    .burger-close i {
+        color: rgb(0, 0, 0);
+        font-size: 1.1em;
+    }
+
+    /* Liste des liens */
+
+    #mainNav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        margin-top: 0;
+        list-style: none;
+    }
+
+    #mainNav ul li {
+        width: 100%;
+        border: 0.1px solid white;
+    }
+
+    #mainNav ul li a {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border-radius: 1px;
+        padding: 16px 12px;
+        font-size: 0.97em;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.85);
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    #mainNav ul li a i {
+        font-size: 1.1em;
+        width: 22px;
+        margin-left: 5%;
+        text-align: center;
+        color: rgba(255, 136, 0, 0.7);
+        transition: color 0.2s ease;
+    }
+
+    #mainNav ul li a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: rgb(255, 255, 255);
+        padding-left: 22px;
+    }
+
+    #mainNav ul li a:hover i {
+        color: white;
+    }
+
+    /* Avatar AY */
+
+    #mainNav ul li a.yeo {
+        background: rgb(255, 166, 0);
+        color: #ffffff;
+        font-weight: bold;
+        margin-top: 8px;
+        font-size: 1.1em;
+    }
+
+    
+    #mainNav ul li a.yeo:hover {
+        background: rgba(255, 255, 255, 0.4);
+        color: rgb(255, 255, 255);
+        padding-left: 16px;
+    }
+
+}
 
 
           /* stylisation de la du debut de la page */
@@ -55,11 +267,11 @@ nav ul{
 
 .consultation {
     padding: 5% 10%;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 1.5em; 
-    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    text-align: center;
     width: 100%;
     box-sizing: border-box;
 }
@@ -101,8 +313,6 @@ nav ul{
     padding: 0 4% 4%;
 }
 
-
-
 .carte-bleu,
 .carte-vert {
     flex: 1;
@@ -116,13 +326,13 @@ nav ul{
 .carte-bleu {
     background: #eef2ff;
     border: 1.5px solid #c7d2fe;
-    transition: transform 0.2s ease, box-shadow 0.2s ease
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .carte-vert {
     background: #f0fdf4;
     border: 1.5px solid #bbf7d0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .carte-bleu:hover {
@@ -192,10 +402,6 @@ nav ul{
 }
 
 
-
-
-
-
      /* BARRE DE NAVIGATION COULISSANTE */
 
 .nav-slider {
@@ -220,7 +426,6 @@ nav ul{
 }
 
 .nav-btn {
-    
     z-index: 1;
     padding: 10px 24px;
     border: none;
@@ -232,7 +437,6 @@ nav ul{
     cursor: pointer;
     white-space: nowrap;
     transition: color 0.25s ease;
-    
 }
 
 .nav-btn.actif {
@@ -251,7 +455,6 @@ nav ul{
 }
 
 .panneaux-piste {
-
     display: flex;
     width: 300%;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -267,6 +470,7 @@ nav ul{
 }
 
     /*  GRILLE */
+
 .grille {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -336,8 +540,9 @@ nav ul{
 }
 
 .lieu i {
-     color: #999; font-size: 14px;
- }
+    color: #999;
+    font-size: 14px;
+}
 
 .note {
     display: flex;
@@ -407,8 +612,6 @@ nav ul{
     font-weight: 500;
     cursor: not-allowed;
 }
-
-
 
 
       /* stylysation de la carde de prise de rendevous au clic du bouton "prendre rendez-vous" */
@@ -548,7 +751,6 @@ nav ul{
 }
 
 
-
         /* stylisation du block garantie */
 
 
@@ -562,7 +764,7 @@ nav ul{
     gap: 1.5em;
     width: 60%;
     margin-top: 8%;
-    box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.08)
+    box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .garantie-entete {
@@ -597,4 +799,237 @@ nav ul{
     align-items: center;
     gap: 0.8em;
     font-size: 0.95em;
+}
+
+
+           /* ci ce trouve les style de la responsive en fonction des ecrant */
+
+
+         /*  GRANDS ÉCRANS  (min-width: 1281px) */
+
+@media (min-width: 1281px) {
+
+    header {
+        padding: 10px 7%;
+    }
+
+    header img {
+        width: 160px;
+        height: 160px;
+    }
+
+    nav ul {
+        gap: 40px;
+        font-size: 1.1em;
+    }
+
+    .consultation h1 {
+        max-width: 50%;
+    }
+
+    .specialistes {
+        padding: 40px 60px;
+    }
+
+    .grille {
+        gap: 30px;
+    }
+
+    .garantie {
+        width: 50%;
+    }
+
+    .rendez-vous {
+        width: 35%;
+    }
+}
+
+
+       /* PC PORTABLE  (769px - 1024px) */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul {
+        gap: 16px;
+        font-size: 0.95em;
+    }
+
+    .consultation h1 {
+        max-width: 80%;
+    }
+
+    .carte-consultation {
+        flex-direction: column;
+        padding: 0 4% 4%;
+        gap: 1em;
+    }
+
+    .specialistes {
+        padding: 30px 20px;
+    }
+
+    .grille {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .garantie {
+        width: 80%;
+    }
+
+    .rendez-vous {
+        width: 65%;
+    }
+}
+
+
+       /* BURGER — Tablette + Mobile (max 768px) */
+
+@media (max-width: 768px) {
+
+    header img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .consultation {
+        padding: 6% 5%;
+    }
+
+    .consultation h1 {
+        max-width: 100%;
+        font-size: clamp(1.4rem, 5vw, 2rem);
+    }
+
+    .carte-consultation {
+        flex-direction: column;
+        padding: 0 4% 4%;
+        gap: 1em;
+    }
+
+    .specialistes {
+        padding: 24px 16px;
+    }
+
+    .nav-slider {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .grille {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .garantie {
+        width: 92%;
+        margin-top: 5%;
+    }
+
+    .rendez-vous {
+        width: 92%;
+        padding: 6%;
+    }
+}
+
+
+       /* TABLETTE  (481px - 768px)*/
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    header {
+        padding: 10px 4%;
+    }
+
+    .grille {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .garantie {
+        width: 88%;
+    }
+}
+
+
+        /* MOBILE  (320px - 480px) */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .consultation {
+        padding: 8% 4%;
+    }
+
+    .consultation h1 {
+        font-size: 1.3rem;
+        max-width: 100%;
+    }
+
+    .badge-consultation {
+        font-size: 0.78rem;
+    }
+
+    .carte-consultation {
+        padding: 0 3% 4%;
+    }
+
+    .specialistes {
+        padding: 20px 12px;
+    }
+
+    .nav-slider {
+        width: 100%;
+    }
+
+    .nav-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .grille {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .carte {
+        padding: 20px 16px;
+    }
+
+    .garantie {
+        width: 96%;
+        margin-top: 5%;
+        padding: 5% 4%;
+    }
+
+    .garantie-liste li {
+        font-size: 0.85em;
+    }
+
+    .rendez-vous {
+        width: 96%;
+        padding: 6% 5%;
+    }
 }

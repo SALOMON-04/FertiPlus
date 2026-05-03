@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="images/jpeg" href="../images/Total Protect (1).png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <link rel="stylesheet" href="Consultation.css">
     <title>Consultation</title>
@@ -13,20 +14,74 @@
 <body>
 
 
-
     <header>
+
         <img src="../images/Total Protect (1).png" alt="logo">
-        <nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars" id="burgerIcon"></i>
+        </button>
+
+        <nav id="mainNav">
+
+            <div class="nav-header">
+                <img src="../images/Total Protect (1).png" alt="logo">
+                <button class="burger-close" id="burgerClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
             <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../Symptome/Symptome.html">Symptome</a></li>
-                <li><a href="../Education/Education.html">Education</a></li>
-                <li><a href="../Suivi/suivi.html">Suivi</a></li>
-                <li><a href="">Consultation</a></li>
-                <li><a href="../Connexion/Connexion.html">Compte</a></li>
+
+                <li>
+                    <a href="../index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Symptome/Symptome.html">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>Symptome</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Education/Education.html">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Suivi/suivi.html">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>Suivi</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <span>Consultation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Connexion/Connexion.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Compte</span>
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
 
 
 
@@ -88,13 +143,12 @@
     <!-- disposition des block pour prendre rendez-vous avec les spécialiste -->
 
 
-
     <section class="specialistes">
 
         <!-- BARRE DE NAVIGATION COULISSANTE -->
         <div class="nav-slider">
 
-            <div class="nav-curseur " id="navCurseur"></div>
+            <div class="nav-curseur" id="navCurseur"></div>
 
             <button class="nav-btn actif" data-index="0">Tous les spécialistes</button>
             <button class="nav-btn" data-index="1">Gynécologie</button>
@@ -117,13 +171,11 @@
                         <div class="gyneco carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DAD</div>
                                 <div>
                                     <h3>Dr. Aminata Diallo</h3>
                                     <span class="titre">Gynécologue</span>
                                 </div>
-
                             </div>
 
                             <div class="lieu">
@@ -153,34 +205,27 @@
                         <div class="urologie carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DKM</div>
                                 <div>
                                     <h3>Dr. Kwame Mensah</h3>
                                     <span class="titre">Urologue</span>
                                 </div>
-
                             </div>
 
                             <div class="lieu">
-
                                 <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
                                 <span>Accra, Ghana</span>
                             </div>
 
                             <div class="note">
-
                                 <i class="fa-solid fa-star"></i>
                                 <span>4.9</span>
                                 <span class="avis">(156 avis)</span>
-
                             </div>
 
                             <div class="langues">
-
                                 <span class="langue">Français</span>
                                 <span class="langue">Anglais</span>
-
                             </div>
 
                             <button type="button" class="btn-rdv-spec">
@@ -194,29 +239,22 @@
                         <div class="gyneco carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DFN</div>
                                 <div>
                                     <h3>Dr. Fatou Ndiaye</h3>
                                     <span class="titre">Gynécologue</span>
-
                                 </div>
-
                             </div>
 
                             <div class="lieu">
-
                                 <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
                                 <span>Abidjan, Côte d'Ivoire</span>
-
                             </div>
 
                             <div class="note">
-
                                 <i class="fa-solid fa-star"></i>
                                 <span>4.7</span>
                                 <span class="avis">(98 avis)</span>
-
                             </div>
 
                             <div class="langues">
@@ -230,16 +268,11 @@
                         <div class="urologie carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DIT</div>
-
                                 <div>
-
                                     <h3>Dr. Ibrahim Traoré</h3>
                                     <span class="titre">Urologue</span>
-
                                 </div>
-
                             </div>
 
                             <div class="lieu">
@@ -268,12 +301,10 @@
                         <div class="gyneco carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DAD</div>
                                 <div>
                                     <h3>Dr. Aïcha Diop</h3>
                                     <span class="titre">Gynécologue</span>
-
                                 </div>
                             </div>
 
@@ -283,18 +314,14 @@
                             </div>
 
                             <div class="note">
-
                                 <i class="fa-solid fa-star"></i>
                                 <span>4.9</span>
                                 <span class="avis">(142 avis)</span>
-
                             </div>
 
                             <div class="langues">
-
                                 <span class="langue">Français</span>
                                 <span class="langue">Éwé</span>
-
                             </div>
 
                             <button type="button" class="btn-rdv-spec">
@@ -307,13 +334,11 @@
                         <div class="urologie carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DOB</div>
                                 <div>
                                     <h3>Dr. Oumar Ba</h3>
                                     <span class="titre">Urologue</span>
                                 </div>
-
                             </div>
 
                             <div class="lieu">
@@ -322,11 +347,9 @@
                             </div>
 
                             <div class="note">
-
                                 <i class="fa-solid fa-star"></i>
                                 <span>4.5</span>
                                 <span class="avis">(67 avis)</span>
-
                             </div>
 
                             <div class="langues">
@@ -353,48 +376,39 @@
                         <div class="carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DAD</div>
                                 <div>
                                     <h3>Dr. Aminata Diallo</h3>
                                     <span class="titre">Gynécologue</span>
                                 </div>
-
                             </div>
 
                             <div class="lieu">
-
                                 <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
                                 <span>Dakar, Sénégal</span>
-
                             </div>
 
                             <div class="note">
-
                                 <i class="fa-solid fa-star"></i>
                                 <span>4.8</span>
                                 <span class="avis">(127 avis)</span>
-
                             </div>
 
                             <div class="langues">
-
                                 <span class="langue">Français</span>
                                 <span class="langue">Wolof</span>
-
                             </div>
 
-                            <button type="button" class="btn-rdv-spec"><i class="fa-regular fa-calendar"></i> Prendre
-                                rendez-vous </button>
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i> Prendre rendez-vous
+                            </button>
 
                         </div>
 
                         <div class="carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DFN</div>
-
                                 <div>
                                     <h3>Dr. Fatou Ndiaye</h3>
                                     <span class="titre">Gynécologue</span>
@@ -402,18 +416,14 @@
                             </div>
 
                             <div class="lieu">
-
                                 <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
                                 <span>Abidjan, Côte d'Ivoire</span>
-
                             </div>
 
                             <div class="note">
-
                                 <i class="fa-solid fa-star"></i>
                                 <span>4.7</span>
                                 <span class="avis">(98 avis)</span>
-
                             </div>
 
                             <div class="langues"><span class="langue">Français</span></div>
@@ -448,8 +458,9 @@
                                 <span class="langue">Éwé</span>
                             </div>
 
-                            <button type="button" class="btn-rdv-spec"><i class="fa-regular fa-calendar"></i> Prendre
-                                rendez-vous</button>
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i> Prendre rendez-vous
+                            </button>
 
                         </div>
 
@@ -466,14 +477,11 @@
                         <div class="carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DKM</div>
-
                                 <div>
                                     <h3>Dr. Kwame Mensah</h3>
                                     <span class="titre">Urologue</span>
                                 </div>
-
                             </div>
 
                             <div class="lieu">
@@ -483,7 +491,8 @@
 
                             <div class="note">
                                 <i class="fa-solid fa-star"></i>
-                                <span>4.9</span><span class="avis">(156 avis)</span>
+                                <span>4.9</span>
+                                <span class="avis">(156 avis)</span>
                             </div>
 
                             <div class="langues">
@@ -491,15 +500,15 @@
                                 <span class="langue">Anglais</span>
                             </div>
 
-                            <button type="button" class="btn-rdv-spec"><i class="fa-regular fa-calendar"></i> prendre
-                                rendez-vous</button>
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i> Prendre rendez-vous
+                            </button>
 
                         </div>
 
                         <div class="carte">
 
                             <div class="entete">
-
                                 <div class="avatar">DIT</div>
                                 <div>
                                     <h3>Dr. Ibrahim Traoré</h3>
@@ -523,8 +532,9 @@
                                 <span class="langue">Bambara</span>
                             </div>
 
-                            <button type="button" class="btn-rdv-spec"><i class="fa-regular fa-calendar"></i>
-                                Prendre rendez-vous</button>
+                            <button type="button" class="btn-rdv-spec">
+                                <i class="fa-regular fa-calendar"></i> Prendre rendez-vous
+                            </button>
 
                         </div>
 
@@ -533,7 +543,8 @@
                             <div class="entete">
                                 <div class="avatar">DOB</div>
                                 <div>
-                                    <h3>Dr. Oumar Ba</h3><span class="titre">Urologue</span>
+                                    <h3>Dr. Oumar Ba</h3>
+                                    <span class="titre">Urologue</span>
                                 </div>
                             </div>
 
@@ -543,7 +554,8 @@
                             </div>
 
                             <div class="note">
-                                <i class="fa-solid fa-star"></i><span>4.5</span>
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.5</span>
                                 <span class="avis">(67 avis)</span>
                             </div>
 
@@ -551,8 +563,10 @@
                                 <span class="langue">Français</span>
                                 <span class="langue">Soussou</span>
                             </div>
+
                             <button type="button" class="btn-rdv-spec">
-                                <i class="fa-regular fa-calendar"></i> Prendre rendez-vous</button>
+                                <i class="fa-regular fa-calendar"></i> Prendre rendez-vous
+                            </button>
 
                         </div>
 
@@ -563,7 +577,6 @@
             </div>
 
         </div>
-
 
     </section>
 
@@ -585,15 +598,12 @@
             </div>
 
             <div class="groupe-rendev">
-
                 <label>Type de consultation</label>
-
                 <select>
                     <option value="" disabled selected>Choisir</option>
                     <option>Téléconsultation</option>
                     <option>Consultation en personne</option>
                 </select>
-
             </div>
 
             <div class="dat-souhaitee">
@@ -602,7 +612,6 @@
             </div>
 
             <div class="Heure">
-
                 <label>Heure</label>
                 <select>
                     <option value="" disabled selected>Sélectionner</option>
@@ -614,7 +623,6 @@
                     <option>15:00</option>
                     <option>16:00</option>
                 </select>
-
             </div>
 
             <div class="motif-consutation">
@@ -637,7 +645,6 @@
     <!-- stylisation du block 'votre fertilité  notre préocupation' -->
 
 
-
     <section class="garantie">
 
         <div class="garantie-entete">
@@ -649,18 +656,14 @@
             <li><i class="fa-solid fa-check"></i> Toutes les réservations de consultation sont reçues et traitées</li>
             <li><i class="fa-solid fa-check"></i> Vos données médicales sont cryptées de bout en bout</li>
             <li><i class="fa-solid fa-check"></i> Paiement sécurisés et de tout type</li>
-            <li><i class="fa-solid fa-check"></i> Des spécialistes qui vous suivent du début jusqu'à la fin de votre traitement</li>
+            <li><i class="fa-solid fa-check"></i> Des spécialistes qui vous suivent du début jusqu'à la fin de votre
+                traitement</li>
         </ul>
 
     </section>
 
 
-
-
     <script src="Consultation.js"></script>
-
-
-
 
 
 </body>

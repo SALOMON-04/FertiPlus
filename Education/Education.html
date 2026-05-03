@@ -12,49 +12,94 @@
 
 <body>
 
-
     <header>
         <img src="../images/Total Protect (1).png" alt="logo">
-        <nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="mainNav">
+
+            <div class="nav-header">
+
+                <img src="../images/Total Protect (1).png" alt="logo">
+                <button class="burger-close" id="burgerClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
             <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../Symptome/Symptome.html">Symptome</a></li>
-                <li><a href="">Education</a></li>
-                <li><a href="../Suivi/suivi.html">Suivi</a></li>
-                <li><a href="../Consultation/Consultation.html">Consultation</a></li>
-                <li><a href="../Connexion/Connexion.html">Compte</a></li>
+
+                <li>
+                    <a href="../index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Symptome/Symptome.html">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>Symptome</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Suivi/suivi.html">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Suivi</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Consultation/Consultation.html">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>Consultation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Connexion/Connexion.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Compte</span>
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
     </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
 
 
     <form class="grande-section">
 
-
-        <!-- le corps de la partie acrticle -->
+        <!-- HERO -->
 
         <section class="hero-education">
-
-            <!-- Badge -->
 
             <div class="badge-education">
                 <i class="fa-solid fa-book-open"></i>
                 <span>Ressources Éducatives</span>
             </div>
 
-            <!-- Titre -->
-
             <h1>Tout savoir sur la santé intime</h1>
             <p>Des informations fiables et adaptées au contexte africain</p>
-
-            <!-- Barre de recherche -->
 
             <div class="recherche">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Rechercher un sujet...">
             </div>
-
-            <!-- Filtres -->
 
             <div class="filtres">
                 <button class="filtre">Tout</button>
@@ -64,31 +109,28 @@
                 <button class="filtre actif">Prévention</button>
             </div>
 
-            <!-- Onglets -->
-
             <div class="onglets">
                 <button type="button" class="onglet actif-onglet" id="btn-articles">Articles</button>
-                <button  type="button" class="onglet" id="btn-faq">Questions fréquentes</button>
+                <button type="button" class="onglet" id="btn-faq">Questions fréquentes</button>
             </div>
 
         </section>
 
-        <div id="contenu-articles">
-            <section class="articles">
+        <!-- ARTICLES -->
 
-                <!-- Carte 1 -->
+        <div id="contenu-articles">
+
+            <section class="articles">
 
                 <div class="mini-block">
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     <h2>Prévention des IST</h2>
                     <p class="sous-titre">Comment se protéger des infections sexuellement transmissibles</p>
                     <p class="contenu">Les IST sont très répandues en Afrique. L'utilisation systématique du
-                        préservatif, le
-                        dépistage régulier et la limitation du nombre de partenaires sont essentiels.</p>
+                        préservatif, le dépistage régulier et la limitation du nombre de partenaires sont essentiels.
+                    </p>
                     <a href="">Lire la suite →</a>
                 </div>
-
-                <!-- Carte 2 -->
 
                 <div class="mini-block">
                     <i class="fa-regular fa-heart"></i>
@@ -100,38 +142,28 @@
                     <a href="">Lire la suite →</a>
                 </div>
 
-                <!-- Carte 3 -->
-
                 <div class="mini-block">
                     <i class="fa-regular fa-heart"></i>
                     <h2>Fibromes utérins</h2>
                     <p class="sous-titre">Comprendre et gérer les fibromes</p>
                     <p class="contenu">Les fibromes sont des tumeurs bénignes très courantes. Ils peuvent causer des
                         saignements abondants et des douleurs. Plusieurs options de traitement existent selon la taille
-                        et
-                        les symptômes.</p>
+                        et les symptômes.</p>
                     <a href="">Lire la suite →</a>
                 </div>
 
             </section>
 
-
-
             <section class="articles2">
-
-                <!-- Carte 4 -->
 
                 <div class="mini-block">
                     <i class="fa-solid fa-capsules"></i>
                     <h2>Santé de la prostate</h2>
                     <p class="sous-titre">Dépistage et prévention des problèmes de prostate</p>
                     <p class="contenu">Après 50 ans, le dépistage du cancer de la prostate est recommandé.
-                        L'hypertrophie
-                        bénigne de la prostate est aussi très fréquente et peut être traitée.</p>
+                        L'hypertrophie bénigne de la prostate est aussi très fréquente et peut être traitée.</p>
                     <a href="">Lire la suite →</a>
                 </div>
-
-                <!-- Carte 5 -->
 
                 <div class="mini-block">
                     <i class="fa-regular fa-face-smile"></i>
@@ -142,15 +174,12 @@
                     <a href="">Lire la suite →</a>
                 </div>
 
-                <!-- Carte 6 -->
-
                 <div class="mini-block">
                     <i class="fa-regular fa-heart"></i>
                     <h2>Hygiène intime</h2>
                     <p class="sous-titre">Les bonnes pratiques d'hygiène</p>
                     <p class="contenu">Une hygiène intime adaptée prévient les infections. Utilisez un savon doux,
-                        séchez
-                        bien la zone, portez des sous-vêtements en coton, et évitez les douches vaginales.</p>
+                        séchez bien la zone, portez des sous-vêtements en coton, et évitez les douches vaginales.</p>
                     <a href="">Lire la suite →</a>
                 </div>
 
@@ -158,7 +187,7 @@
 
         </div>
 
-        <!-- le corps de la partie question frequente -->
+        <!-- FAQ -->
 
         <div id="contenu-faq" style="display: none;">
 
@@ -173,35 +202,30 @@
 
                     <details class="item">
                         <summary class="question">Quand dois-je consulter un gynécologue ?</summary>
-                        <p class="reponse">Il est recommandé de consulter au moins une fois par an pour un contrôle
-                            de
+                        <p class="reponse">Il est recommandé de consulter au moins une fois par an pour un contrôle de
                             routine, même sans symptômes. Consultez immédiatement en cas de saignements anormaux,
-                            douleurs
-                            pelviennes, pertes inhabituelles ou symptômes d'IST.</p>
+                            douleurs pelviennes, pertes inhabituelles ou symptômes d'IST.</p>
                     </details>
 
                     <details class="item">
                         <summary class="question">Le dépistage du cancer du col est-il douloureux ?</summary>
                         <p class="reponse">Le frottis cervical est généralement indolore, même si certaines femmes
                             peuvent ressentir un léger inconfort. L'examen ne dure que quelques minutes et peut sauver
-                            votre
-                            vie.</p>
+                            votre vie.</p>
                     </details>
 
                     <details class="item">
                         <summary class="question">Comment savoir si j'ai une IST ?</summary>
                         <p class="reponse">Les symptômes incluent : écoulements anormaux, démangeaisons, douleurs en
                             urinant, lésions génitales. Mais attention : beaucoup d'IST sont asymptomatiques ! Un
-                            dépistage
-                            régulier est essentiel.</p>
+                            dépistage régulier est essentiel.</p>
                     </details>
 
                     <details class="item">
                         <summary class="question">Les problèmes de prostate sont-ils graves ?</summary>
                         <p class="reponse">L'hypertrophie bénigne de la prostate est très fréquente après 50 ans et
                             n'est pas cancéreuse. Le cancer de la prostate, détecté tôt, se traite très bien. Le
-                            dépistage
-                            est crucial.</p>
+                            dépistage est crucial.</p>
                     </details>
 
                     <details class="item">
@@ -213,7 +237,9 @@
 
                 </div>
 
+
             </section>
+
         </div>
 
     </form>
@@ -223,13 +249,12 @@
         <div class="contenu">
             <h2>Vous avez des questions ?</h2>
             <p>Notre équipe de spécialistes est là pour vous aider</p>
-            <a href="consultation.html" class="btn">Consulter un spécialiste</a>
+            <a href="../Consultation/Consultation.html" class="btn">Consulter un spécialiste</a>
         </div>
     </section>
 
 
     <script src="Education.js"></script>
-
 
 
 

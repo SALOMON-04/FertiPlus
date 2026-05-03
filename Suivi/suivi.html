@@ -14,18 +14,74 @@
 
 
     <header>
+        
         <img src="../images/Total Protect (1).png" alt="logo">
-        <nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars" id="burgerIcon"></i>
+        </button>
+
+        <nav id="mainNav">
+
+            <div class="nav-header">
+
+                <img src="../images/Total Protect (1).png" alt="logo">
+                <button class="burger-close" id="burgerClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
             <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../Symptome/Symptome.html">Symptome</a></li>
-                <li><a href="../Education/Education.html">Education</a></li>
-                <li><a href="">Suivi</a></li>
-                <li><a href="../Consultation/Consultation.html">Consultation</a></li>
-                <li><a href="../Connexion/Connexion.html">Compte</a></li>
+
+                <li>
+                    <a href="../index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Symptome/Symptome.html">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>Symptome</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Education/Education.html">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>Suivi</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Consultation/Consultation.html">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <span>Consultation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Connexion/Connexion.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Compte</span>
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
 
 
 
@@ -49,15 +105,19 @@
             <!-- Onglets -->
 
             <div class="onglets-suivi">
+
                 <button type="button" class="onglet-suivi actif-suivi" id="btn-cycle">
                     <i class="fa-regular fa-heart"></i> Cycle
                 </button>
+
                 <button type="button" class="onglet-suivi" id="btn-rappels">
                     <i class="fa-regular fa-bell"></i> Rappels
                 </button>
+
                 <button type="button" class="onglet-suivi" id="btn-sante">
                     <i class="fa-solid fa-arrow-trend-up"></i> Santé
                 </button>
+
             </div>
 
         </section>
@@ -116,6 +176,7 @@
                     <div class="jour-nom">Dim</div>
 
                     <!-- Jours -->
+
                     <div class="cal-jour regles">25</div>
                     <div class="cal-jour regles">26</div>
                     <div class="cal-jour regles">27</div>
@@ -159,19 +220,24 @@
                 </div>
 
                 <!-- Légende -->
+
                 <div class="legende">
+
                     <div class="item">
                         <div class="couleur regles"></div>
                         <span>Règles</span>
                     </div>
+
                     <div class="item">
                         <div class="couleur ovulation"></div>
                         <span>Ovulation</span>
                     </div>
+
                     <div class="item">
                         <div class="couleur fertile"></div>
                         <span>Période fertile</span>
                     </div>
+
                 </div>
 
             </div>
@@ -191,7 +257,9 @@
                 </div>
 
                 <div class="groupe">
+
                     <label for="duree-cycle">Durée du cycle (jours)</label>
+
                     <select id="duree-cycle">
                         <option value="21">21 jours</option>
                         <option value="22">22 jours</option>
@@ -228,16 +296,20 @@
             <div class="rappels">
 
                 <div class="rappels-entete">
+
                     <div>
                         <h2>Mes rappels</h2>
                         <p>Ne manquez plus aucun rendez-vous ou traitement</p>
                     </div>
+                   
                     <button type="button" class="btn-ajouter">+ Ajouter</button>
+                
                 </div>
 
                 <div class="rappels-liste">
 
                     <div class="rappel-item">
+
                         <div class="rappel-gauche">
                             <i class="fa-regular fa-calendar" style="color: #7c3aed;"></i>
                             <div>
@@ -245,10 +317,13 @@
                                 <span>15 avril 2026</span>
                             </div>
                         </div>
+
                         <button type="button" class="btn-supprimer">Supprimer</button>
+                    
                     </div>
 
                     <div class="rappel-item">
+
                         <div class="rappel-gauche">
                             <i class="fa-solid fa-capsules" style="color: #2563eb;"></i>
                             <div>
@@ -256,7 +331,9 @@
                                 <span>6 avril 2026</span>
                             </div>
                         </div>
+
                         <button type="button" class="btn-supprimer">Supprimer</button>
+                    
                     </div>
 
                 </div>
@@ -321,6 +398,8 @@
 
 
     <script src="suivi.js"></script>
+
+    
 
 </body>
 

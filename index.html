@@ -5,25 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="images/jpeg" href="images/Total Protect (1).png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" /> 
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Acceuil</title>
 </head>
 
 <body>
+
     <header>
         <img src="images/Total Protect (1).png" alt="logo">
-        <nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="mainNav">
+            <div class="nav-header">
+                <img src="images/Total Protect (1).png" alt="logo">
+                <button class="burger-close" id="burgerClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="symptome/Symptome.html">Symptome</a></li>
-                <li><a href="Education/Education.html">Education</a></li>
-                <li><a href="Suivi/suivi.html">Suivi</a></li>
-                <li><a href="Consultation/Consultation.html">Consultation</a></li>
-                <li><a href="Connexion/Connexion.html">Compte</a></li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="symptome/Symptome.html">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>Symptome</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Education/Education.html">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Suivi/suivi.html">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Suivi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Consultation/Consultation.html">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>Consultation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Connexion/Connexion.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Compte</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
 
 
     <section class="belge">
@@ -52,70 +96,47 @@
     </div>
 
 
-
     <section classe="block1">
 
         <div class="petitblock1_2">
 
-
-          <!-- BLOC 1 : Analyse -->
-
-
+            <!-- BLOC 1 : Analyse -->
             <div class="petitblock1">
-
                 <i class="fa-solid fa-heart-pulse"></i>
-
                 <h2 class="titre">Analyse IA</h2>
-
                 <div class="badge">
                     <span class="sticker">🎯</span>
-                    <span >  Diagnostic intelligent</span>
+                    <span>Diagnostic intelligent</span>
                 </div>
-
                 <p class="description">
                     Notre IA analyse vos symptomes en quelques clics et vous oriente
-                    rapidement vers les bon s soins .
+                    rapidement vers les bons soins.
                 </p>
-
                 <div class="tag">
                     <span class="tag-text"># Rapide, précis et confidentiel</span>
                 </div>
-
                 <hr class="tracé">
-
-                <div class="directionAnalyse" >
-                    <span><a href="Symptome/Symptome.html">commencer l'analyse  <span class="direction">→</span></a></span>
-                    
+                <div class="directionAnalyse">
+                    <span><a href="Symptome/Symptome.html">commencer l'analyse <span class="direction">→</span></a></span>
                 </div>
-
             </div>
 
-
-
-           <!-- BLOC 2 : Education -->
-
+            <!-- BLOC 2 : Education -->
             <div class="petitblock-education">
-
                 <i class="fa-solid fa-book-open"></i>
-
                 <h2 class="titre">Education</h2>
-
                 <div class="badge">
                     <span class="sticker">📚</span>
                     <span>Connaissance accessible</span>
                 </div>
-
                 <p class="description">
                     Des articles clairs sur les IST, fibrome, endométriose, la prostate...
                     Tout ce que vous devez savoir.
                 </p>
-
                 <div class="tag">
                     <span class="tag-text"># Adaptés à tout le monde</span>
                 </div>
-
                 <hr class="tracé">
-
                 <div class="directionAnalyse">
                     <a href="Education/Education.html">explorer les ressources <span class="direction">→</span></a>
                 </div>
@@ -123,234 +144,212 @@
 
         </div>
 
-         
         <div class="petitblock3_4">
 
-
-          <!-- BLOC 3 : Suivi -->
-
-
+            <!-- BLOC 3 : Suivi -->
             <div class="petitblock-suivi">
-
                 <i class="fa-solid fa-calendar-days"></i>
-
                 <h2 class="titre">Suivi</h2>
-
                 <div class="badge">
                     <span class="sticker">📅</span>
                     <span>Contrôlez votre santé</span>
                 </div>
-
                 <p class="description">
                     Suivez votre cycle menstruel, ovulation, traitements et recevez
                     des rappels automatiques spécifiques.
                 </p>
-
                 <div class="tag">
                     <span class="tag-text"># Ne manquez plus rien</span>
                 </div>
-
                 <hr class="tracé">
-
                 <div class="directionAnalyse">
                     <a href="Suivi/suivi.html">commencer le suivi <span class="direction">→</span></a>
                 </div>
             </div>
 
-
-
             <!-- BLOC 4 : Consultation -->
-
-
-            <div class=" petitblock-consultation">
-
+            <div class="petitblock-consultation">
                 <i class="fa-solid fa-comments"></i>
-
                 <h2 class="titre">Consultation</h2>
-
                 <div class="badge">
                     <span class="sticker">👨‍⚕️</span>
                     <span>Experts à votre écoute</span>
                 </div>
-
                 <p class="description">
                     Consultez des gynécologues et urologues en toute discrétion
                     en prenant rendez-vous.
                 </p>
-
                 <div class="tag">
                     <span class="tag-text"># 100% confidentiel</span>
                 </div>
-
                 <hr class="tracé">
-
                 <div class="directionAnalyse">
                     <a href="Consultation/Consultation.html">Prendre rendez-vous <span class="direction">→</span></a>
                 </div>
             </div>
 
         </div>
-       
 
     </section>
 
 
     <section class="blanche">
-
         <img src="images/image3.jpg" alt="un téléphone et un stetoscope">
-
         <div class="droite">
             <span class="technologie">Une technologie au servive de votre bien-être</span>
-
             <div class="reponse">
                 <i class="fa-solid fa-bolt-lightning"></i>
                 <div>
                     <h3>Reponses instantanées</h3>
-                     <span>Notre IA vous repond en quelques secondes , 24h/24 7j/7 </span>
+                    <span>Notre IA vous repond en quelques secondes , 24h/24 7j/7 </span>
                 </div>
             </div>
-
-             <div class="securite">
+            <div class="securite">
                 <i class="fa-solid fa-lock"></i>
                 <div>
                     <h3>Sécuritée optimale</h3>
-                     <span>Vos donné sont protégés et crypter </span>
+                    <span>Vos donné sont protégés et crypter </span>
                 </div>
             </div>
-
-             <div class="specialiste">
+            <div class="specialiste">
                 <i class="fa-solid fa-users"></i>
                 <div>
                     <h3>Spécialistes qualifiés</h3>
-                     <span>Des experts à vos service près a vous aidez quelque soit votre localisation </span>
+                    <span>Des experts à vos service près a vous aidez quelque soit votre localisation </span>
                 </div>
             </div>
-
         </div>
-
     </section>
-
 
 
     <section class="promotion">
         <h1>Pourquoi Fertiplus</h1>
-
-        <Div class="block2">
-             
+        <div class="block2">
             <div class="cadre">
-
                 <div class="detection">
                     <div class="un">
                         <span class="chiffre">1</span>
                         <h2>Detection precosse</h2>
                     </div>
-                       <span>l'IA analyse vos symptomes pour identifier les problèmes avant qu'ils ne s'aggravent . Faites vous Consultez </span>
+                    <span>l'IA analyse vos symptomes pour identifier les problèmes avant qu'ils ne s'aggravent . Faites vous Consultez </span>
                 </div>
-
                 <div class="accessible">
                     <div class="un">
                         <span class="chiffre">2</span>
                         <h2>accessible partout</h2>
                     </div>
-                       <span>Vous pouvez rendez-vous depuis chez vous, où que vous soyez avec un spécialiste .</span>
+                    <span>Vous pouvez rendez-vous depuis chez vous, où que vous soyez avec un spécialiste .</span>
                 </div>
-
                 <div class="Gratuit">
                     <div class="un">
                         <span class="chiffre">3</span>
                         <h2>Gratuit pour tous</h2>
                     </div>
-                       <span>Consus pour tous afin d'avoir des soin rapide et sauver des couples . Faites vous</span>
+                    <span>Consus pour tous afin d'avoir des soin rapide et sauver des couples . Faites vous</span>
                 </div>
-
             </div>
-
-                <img src="images/image4.png" alt="photo d'un couple">
-
-        </Div>
-
+            <img src="images/image4.png" alt="photo d'un couple">
+        </div>
     </section>
 
 
-     <div class="commenter">
+    <div class="commenter">
         <h1>Ce qu'ils disent de nous</h1>
         <span>Des utilisateurs satisfaits et bien portant</span>
-     </div>
+    </div>
 
 
     <section class="commentaire">
         <div class="rose">
-           <div class="NomUtilisateur">
-                  <span>A</span>
+            <div class="NomUtilisateur">
+                <span>A</span>
                 <div class="Nom">
                     <h1>Aminata D.</h1>
                     <span>Dakar, Sénégal</span>
                 </div>
-           </div>
-              <span>" Enfin une qui respect la vie privé ! j'ai pu consulter sans gene et recevoir de vrais conseil " </span>
+            </div>
+            <span>" Enfin une qui respect la vie privé ! j'ai pu consulter sans gene et recevoir de vrais conseil " </span>
         </div>
 
         <div class="bleu">
             <div class="NomUtilisateur">
-                  <span>K</span>
+                <span>K</span>
                 <div class="Nom">
                     <h1>Kwamé M..</h1>
                     <span>Accra , Ghana</span>
                 </div>
             </div>
-                  <span>" le dépistage précoce ma sauvé la vie. Je recommande ce site à tous les homme de 35 ans et plus  " </span>
+            <span>" le dépistage précoce ma sauvé la vie. Je recommande ce site à tous les homme de 35 ans et plus  " </span>
         </div>
-
     </section>
 
 
-    <footer >
+    <footer>
+        <div class="contenu">
 
-                <div class="contenu">
-
-                    <!-- Logo + description -->
-                    <div class="foot-logo">
-                        <div class="footer-logo">
-                            <img src="images/Total Protect (1).png" alt="mon logo">
-                            <span class="logo-nom">FertiPlus</span>
-                        </div>
-                        <span class="footer-desc">Votre santé intime en toute confidentialité. Parce que vous méritez le meilleur.</span>
-                    </div>
-
-                    <!-- Services -->
-
-                    <div class="services">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="Symptome/Symptome.html">Analyse symptômes</a></li>
-                            <li><a href="Education/Education.html">Éducation</a></li>
-                            <li><a href="Suivi/suivi.html">Suivi</a></li>
-                            <li><a href="Consultation/Consultation.html">Consultation</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Légal -->
-
-                    <div class="legal">
-                        <h3>Légal</h3>
-                        <ul>
-                            <li><a href="">Confidentialité</a></li>
-                            <li><a href="">Conditions</a></li>
-                            <li><a href="">Sécurité</a></li>
-                            <li><a href="Connexion/Connexion.html" class="espace-medecin">Espace Médecin</a></li>
-                        </ul>
-                    </div>
-
+            <!-- Logo + description -->
+            <div class="foot-logo">
+                <div class="footer-logo">
+                    <img src="images/Total Protect (1).png" alt="mon logo">
+                    <span class="logo-nom">FertiPlus</span>
                 </div>
+                <span class="footer-desc">Votre santé intime en toute confidentialité. Parce que vous méritez le meilleur.</span>
+            </div>
 
-                <hr class="ligne">
+            <!-- Services -->
+            <div class="services">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="Symptome/Symptome.html">Analyse symptômes</a></li>
+                    <li><a href="Education/Education.html">Éducation</a></li>
+                    <li><a href="Suivi/suivi.html">Suivi</a></li>
+                    <li><a href="Consultation/Consultation.html">Consultation</a></li>
+                </ul>
+            </div>
 
-                <p class="copyright">
-                    © 2026 FertiPlus. Tous droits réservés. Fertiplus , la fertilité au plusriel.
-                </p>
+            <!-- Légal -->
+            <div class="legal">
+                <h3>Légal</h3>
+                <ul>
+                    <li><a href="">Confidentialité</a></li>
+                    <li><a href="">Conditions</a></li>
+                    <li><a href="">Sécurité</a></li>
+                    <li><a href="Connexion/Connexion.html" class="espace-medecin">Espace Médecin</a></li>
+                </ul>
+            </div>
 
+        </div>
+
+        <hr class="ligne">
+
+        <p class="copyright">
+            © 2026 FertiPlus. Tous droits réservés. Fertiplus , la fertilité au plusriel.
+        </p>
     </footer>
-     
+
+
+    <script>
+        const burgerBtn = document.getElementById('burgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function toggleMenu() {
+            burgerBtn.classList.toggle('actif');
+            mainNav.classList.toggle('ouvert');
+            navOverlay.classList.toggle('visible');
+            document.body.classList.toggle('menu-ouvert');
+        }
+
+        burgerBtn.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('ouvert')) toggleMenu();
+            });
+        });
+    </script>
+
 </body>
 
 </html>

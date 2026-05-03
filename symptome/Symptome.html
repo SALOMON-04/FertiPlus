@@ -10,65 +10,102 @@
 </head>
 <body>
 
-
-
-
     <header>
         <img src="../images/Total Protect (1).png" alt="logo">
-        <nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="mainNav">
+            
+            <div class="nav-header">
+                <img src="../images/Total Protect (1).png" alt="logo">
+                <button class="burger-close" id="burgerClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
             <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="">Symptome</a></li>
-                <li><a href="../Education/Education.html">Education</a></li>
-                <li><a href="../Suivi/suivi.html">Suivi</a></li>
-                <li><a href="../Consultation/Consultation.html">Consultation</a></li>
-                <li><a href="../Connexion/Connexion.html">Compte</a></li>
+
+                <li>
+                    <a href="../index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>Symptome</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Education/Education.html">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Suivi/suivi.html">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Suivi</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Consultation/Consultation.html">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>Consultation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Connexion/Connexion.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Compte</span>
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
 
-
+    <div class="nav-overlay" id="navOverlay"></div>
 
 
     <div class="conteneur-coulissant">
         <div class="coulissant" id="coulissant">
 
-
             <!-- VUE 1 — CHOIX DU GENRE -->
-
             <div class="vue" id="vue-genre">
                 <div class="formulaire">
-
                     <div class="titre">
                         <h2>Analyse de symptômes</h2>
                         <p>Commençons par quelques questions simples. Toutes vos réponses restent anonymes.</p>
                     </div>
-
                     <div class="liste">
-
                         <label class="option">
                             <input type="radio" name="genre" value="femme" checked>
                             <span>Une femme</span>
                         </label>
-
                         <label class="option">
                             <input type="radio" name="genre" value="homme">
                             <span>Un homme</span>
                         </label>
-
                     </div>
-
                     <button class="bouton-seul" onclick="choisirGenre()">Continuer →</button>
-
                 </div>
             </div>
 
-
             <!-- VUE 2 — SYMPTÔMES FEMME -->
-
             <div class="vue" id="vue-symptomes-femme">
                 <div class="formulaire">
-
                     <div class="barre-progression">
                         <div class="etape-progression terminee">✓</div>
                         <div class="ligne-progression terminee"></div>
@@ -78,70 +115,30 @@
                         <div class="ligne-progression"></div>
                         <div class="etape-progression">4</div>
                     </div>
-
                     <div class="titre">
                         <h2>Quels symptômes ressentez-vous ?</h2>
                         <p>Sélectionnez tous les symptômes que vous rencontrez actuellement</p>
                     </div>
-
                     <div class="liste">
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-f">
-                            <span>Saignements anormaux</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-f">
-                            <span>Douleurs pelviennes</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-f">
-                            <span>Pertes vaginales inhabituelles</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-f">
-                            <span>Douleurs pendant les rapports</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-f">
-                            <span>Démangeaisons intimes</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-f">
-                            <span>Règles irrégulières</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-f">
-                            <span>Brûlures en urinant</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-f">
-                            <span>Envies fréquentes d'uriner</span>
-                        </label>
-
+                        <label class="option"><input type="checkbox" name="symptome-f"><span>Saignements anormaux</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-f"><span>Douleurs pelviennes</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-f"><span>Pertes vaginales inhabituelles</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-f"><span>Douleurs pendant les rapports</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-f"><span>Démangeaisons intimes</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-f"><span>Règles irrégulières</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-f"><span>Brûlures en urinant</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-f"><span>Envies fréquentes d'uriner</span></label>
                     </div>
-
                     <div class="navigation">
                         <button class="bouton-retour" onclick="aller('vue-genre')">← Retour</button>
                         <button class="bouton-continuer" onclick="aller('vue-temps-femme')">Continuer →</button>
                     </div>
-
                 </div>
             </div>
 
-
             <!-- VUE 3 — DURÉE DES SYMPTÔMES FEMME -->
-
             <div class="vue" id="vue-temps-femme">
                 <div class="formulaire">
-
                     <div class="barre-progression">
                         <div class="etape-progression terminee">✓</div>
                         <div class="ligne-progression terminee"></div>
@@ -151,45 +148,25 @@
                         <div class="ligne-progression"></div>
                         <div class="etape-progression">4</div>
                     </div>
-
                     <div class="titre">
                         <h2>Depuis combien de temps ?</h2>
                         <p>Indiquez depuis quand vous ressentez ces symptômes</p>
                     </div>
-
                     <div class="liste">
-
-                        <label class="option">
-                            <input type="radio" name="duree-f">
-                            <span>Moins d'une semaine</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="duree-f">
-                            <span>1 à 4 semaines</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="duree-f">
-                            <span>Plus d'un mois</span>
-                        </label>
-
+                        <label class="option"><input type="radio" name="duree-f"><span>Moins d'une semaine</span></label>
+                        <label class="option"><input type="radio" name="duree-f"><span>1 à 4 semaines</span></label>
+                        <label class="option"><input type="radio" name="duree-f"><span>Plus d'un mois</span></label>
                     </div>
-
                     <div class="navigation">
                         <button class="bouton-retour" onclick="aller('vue-symptomes-femme')">← Retour</button>
                         <button class="bouton-continuer" onclick="aller('vue-resultat-femme')">Voir les résultats →</button>
                     </div>
-
                 </div>
             </div>
 
-
             <!-- VUE 4 — RÉSULTAT FEMME -->
-
             <div class="vue" id="vue-resultat-femme">
                 <div class="formulaire fond-resultat">
-
                     <div class="banniere-resultat">
                         <i class="fa-solid fa-circle-check"></i>
                         <div>
@@ -197,7 +174,6 @@
                             <p>Basé sur l'analyse de vos symptômes</p>
                         </div>
                     </div>
-
                     <div class="bloc-resultat">
                         <h3>Conditions possibles</h3>
                         <div class="conditions">
@@ -206,7 +182,6 @@
                             <span class="etiquette">Déséquilibre temporaire</span>
                         </div>
                     </div>
-
                     <div class="bloc-resultat">
                         <h3>Recommandations</h3>
                         <ul class="recommandations">
@@ -216,7 +191,6 @@
                             <li><i class="fa-solid fa-circle-check"></i> Évitez les rapports non protégés</li>
                         </ul>
                     </div>
-
                     <div class="bloc-resultat">
                         <h3>Prochaines étapes</h3>
                         <ul class="etapes">
@@ -225,19 +199,14 @@
                             <li><span class="numero">3</span> Suivre un traitement adapté</li>
                         </ul>
                     </div>
-
                     <button class="bouton-rdv">Prendre rendez-vous avec un spécialiste</button>
                     <button class="bouton-nouvelle-analyse" onclick="recommencer()">Nouvelle analyse</button>
-
                 </div>
             </div>
 
-
             <!-- VUE 5 — SYMPTÔMES HOMME -->
-
             <div class="vue" id="vue-symptomes-homme">
                 <div class="formulaire">
-
                     <div class="barre-progression">
                         <div class="etape-progression terminee">✓</div>
                         <div class="ligne-progression terminee"></div>
@@ -247,70 +216,30 @@
                         <div class="ligne-progression"></div>
                         <div class="etape-progression">4</div>
                     </div>
-
                     <div class="titre">
                         <h2>Quels symptômes ressentez-vous ?</h2>
                         <p>Sélectionnez tous les symptômes que vous rencontrez actuellement</p>
                     </div>
-
                     <div class="liste">
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-h">
-                            <span>Douleurs testiculaires</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-h">
-                            <span>Brûlures en urinant</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-h">
-                            <span>Écoulements inhabituels</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-h">
-                            <span>Difficultés urinaires</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-h">
-                            <span>Douleurs pendant les rapports</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-h">
-                            <span>Démangeaisons intimes</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-h">
-                            <span>Envies fréquentes d'uriner</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="checkbox" name="symptome-h">
-                            <span>Problèmes d'érection</span>
-                        </label>
-
+                        <label class="option"><input type="checkbox" name="symptome-h"><span>Douleurs testiculaires</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-h"><span>Brûlures en urinant</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-h"><span>Écoulements inhabituels</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-h"><span>Difficultés urinaires</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-h"><span>Douleurs pendant les rapports</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-h"><span>Démangeaisons intimes</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-h"><span>Envies fréquentes d'uriner</span></label>
+                        <label class="option"><input type="checkbox" name="symptome-h"><span>Problèmes d'érection</span></label>
                     </div>
-
                     <div class="navigation">
                         <button class="bouton-retour" onclick="aller('vue-genre')">← Retour</button>
                         <button class="bouton-continuer" onclick="aller('vue-temps-homme')">Continuer →</button>
                     </div>
-
                 </div>
             </div>
 
-
-            <!-- DURÉE DES SYMPTÔMES HOMME-->
-
+            <!-- VUE 6 — DURÉE DES SYMPTÔMES HOMME -->
             <div class="vue" id="vue-temps-homme">
                 <div class="formulaire">
-
                     <div class="barre-progression">
                         <div class="etape-progression terminee">✓</div>
                         <div class="ligne-progression terminee"></div>
@@ -320,45 +249,25 @@
                         <div class="ligne-progression"></div>
                         <div class="etape-progression">4</div>
                     </div>
-
                     <div class="titre">
                         <h2>Depuis combien de temps ?</h2>
                         <p>Indiquez depuis quand vous ressentez ces symptômes</p>
                     </div>
-
                     <div class="liste">
-
-                        <label class="option">
-                            <input type="radio" name="duree-h">
-                            <span>Moins d'une semaine</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="duree-h">
-                            <span>1 à 4 semaines</span>
-                        </label>
-
-                        <label class="option">
-                            <input type="radio" name="duree-h">
-                            <span>Plus d'un mois</span>
-                        </label>
-
+                        <label class="option"><input type="radio" name="duree-h"><span>Moins d'une semaine</span></label>
+                        <label class="option"><input type="radio" name="duree-h"><span>1 à 4 semaines</span></label>
+                        <label class="option"><input type="radio" name="duree-h"><span>Plus d'un mois</span></label>
                     </div>
-
                     <div class="navigation">
                         <button class="bouton-retour" onclick="aller('vue-symptomes-homme')">← Retour</button>
                         <button class="bouton-continuer" onclick="aller('vue-resultat-homme')">Voir les résultats →</button>
                     </div>
-
                 </div>
             </div>
 
-
             <!-- VUE 7 — RÉSULTAT HOMME -->
-
             <div class="vue" id="vue-resultat-homme">
                 <div class="formulaire fond-resultat">
-
                     <div class="banniere-danger">
                         <i class="fa-solid fa-circle-exclamation"></i>
                         <div>
@@ -366,7 +275,6 @@
                             <p>Basé sur l'analyse de vos symptômes</p>
                         </div>
                     </div>
-
                     <div class="bloc-resultat">
                         <h3>Conditions possibles</h3>
                         <div class="conditions">
@@ -375,7 +283,6 @@
                             <span class="etiquette">Complications possibles</span>
                         </div>
                     </div>
-
                     <div class="bloc-resultat">
                         <h3>Recommandations</h3>
                         <ul class="recommandations">
@@ -385,7 +292,6 @@
                             <li><i class="fa-solid fa-circle-check"></i> Évitez les rapports non protégés</li>
                         </ul>
                     </div>
-
                     <div class="bloc-resultat">
                         <h3>Prochaines étapes</h3>
                         <ul class="etapes">
@@ -394,22 +300,16 @@
                             <li><span class="numero">3</span> Suivre un traitement adapté</li>
                         </ul>
                     </div>
-
-                    <a href="../Consultation/Consultation.html"><button class="bouton-rdv">Prendre rendez-vous avec un spécialiste</button></a>
+                    <button class="bouton-rdv"><a href="../Consultation/Consultation.html">Prendre rendez-vous avec un spécialiste</a></button>
                     <button class="bouton-nouvelle-analyse" onclick="recommencer()">Nouvelle analyse</button>
-
                 </div>
             </div>
-
 
         </div>
     </div>
 
 
-
-
     <script src="Symptome.js"></script>
-
 
 </body>
 </html>

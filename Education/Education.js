@@ -1,3 +1,31 @@
+//   modification du burger
+
+const burgerBtn = document.getElementById('burgerBtn');
+const mainNav = document.getElementById('mainNav');
+const navOverlay = document.getElementById('navOverlay');
+
+function toggleMenu() {
+    burgerBtn.classList.toggle('actif');
+    mainNav.classList.toggle('ouvert');
+    navOverlay.classList.toggle('visible');
+    document.body.classList.toggle('menu-ouvert');
+}
+
+burgerBtn.addEventListener('click', toggleMenu);
+navOverlay.addEventListener('click', toggleMenu);
+
+mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (mainNav.classList.contains('ouvert')) toggleMenu();
+    });
+});
+
+
+
+
+
+//  Systeme de coulissage
+
 const btnArticles = document.getElementById('btn-articles');
 const btnFaq = document.getElementById('btn-faq');
 const contenuArticles = document.getElementById('contenu-articles');
@@ -16,4 +44,3 @@ btnFaq.addEventListener('click', function () {
     btnFaq.classList.add('actif-onglet');
     btnArticles.classList.remove('actif-onglet');
 });
-       

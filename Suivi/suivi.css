@@ -1,24 +1,41 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #FFF5E6;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.menu-ouvert {
+    overflow: hidden;
 }
 
          /* Ici ce trouve les modification du header */
-         
-header  {
-   display: flex;
-   justify-content: space-around;
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    font-size: 1.1em;
 }
 
 header a {
     text-decoration: none;
     color: black;
+     
 }
+
+header a i {
+    color: #ff9500 !important;
+}
+
 
 header a:hover {
     color: blue;
@@ -30,16 +47,212 @@ header img {
     height: 130px;
 }
 
-nav ul{
+nav ul {
     display: flex;
-  padding: 30px;
-  margin: 20px;
-  gap: 30px;
-  list-style: none;
-  transform: translate(-5%);
-
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin-top: 0;
 }
 
+nav ul li a i {
+    color: #C2763A;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover i {
+    color: #E8943A;
+}
+
+
+        /* Ici ce trouve le style de mon Burger */
+
+
+/*  BURGER BOUTON  */
+
+.burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #fdf3d6, #fff0c2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 200;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.burger:hover {
+    transform: scale(1.07);
+}
+
+.burger i {
+    font-size: 1.3em;
+    color: #C2763A;
+    transition: transform 0.3s ease;
+}
+
+
+/*  EN-TÊTE DU MENU MOBILE  */
+
+.nav-header {
+    display: none;
+}
+
+
+/* OVERLAY */
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 149;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-overlay.visible {
+    display: block;
+    opacity: 1;
+}
+
+      /*  BURGER */
+
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex;
+    }
+
+    #mainNav {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 290px;
+        height: 100vh;
+        background: linear-gradient(160deg, #acdcff 0%, #fff1c9 60%, #fcecbd 100%);
+        z-index: 150;
+        transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    #mainNav.ouvert {
+        right: 0;
+    }
+
+
+
+    /* En-tête du menu avec logo + bouton fermer */
+
+    .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 16px;
+        margin-top: 30%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .burger-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .burger-close:hover {
+        background: rgba(255, 255, 255, 0.28);
+        transform: rotate(90deg);
+    }
+
+    .burger-close i {
+        color: rgb(0, 0, 0);
+        font-size: 1.1em;
+    }
+
+    /* Liste des liens */
+
+    #mainNav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        margin-top: 0;
+        list-style: none;
+    }
+
+    #mainNav ul li {
+        width: 100%;
+        border: 0.1px solid white;
+    }
+
+    #mainNav ul li a {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border-radius: 1px;
+        padding: 16px 12px;
+        font-size: 0.97em;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.85);
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    #mainNav ul li a i {
+        font-size: 1.1em;
+        width: 22px;
+        margin-left: 5%;
+        text-align: center;
+        color: rgba(255, 136, 0, 0.7);
+        transition: color 0.2s ease;
+    }
+
+    #mainNav ul li a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: rgb(255, 255, 255);
+        padding-left: 22px;
+    }
+
+    #mainNav ul li a:hover i {
+        color: white;
+    }
+
+    /* Avatar AY */
+
+    #mainNav ul li a.yeo {
+        background: rgb(255, 166, 0);
+        color: #ffffff;
+        font-weight: bold;
+        margin-top: 8px;
+        font-size: 1.1em;
+    }
+
+    
+    #mainNav ul li a.yeo:hover {
+        background: rgba(255, 255, 255, 0.4);
+        color: rgb(255, 255, 255);
+        padding-left: 16px;
+    }
+
+}
 
 
           /* stylisation du debut de la pages */
@@ -56,7 +269,6 @@ nav ul{
     /* HERO SUIVI */
 
 .suivi {
-
     padding: 5% 10%;
     display: flex;
     flex-direction: column;
@@ -135,7 +347,6 @@ nav ul{
        /*  CARDS SUIVI */
 
 .cards-suivi {
-    
     padding: 3% 8%;
     display: flex;
     gap: 2%;
@@ -177,7 +388,6 @@ nav ul{
     font-size: 0.85em;
     color: #94a3b8;
 }
-
 
 
         /* stylisation du calandrier */
@@ -293,9 +503,7 @@ nav ul{
 .couleur.fertile   { background-color: #fce7f3; }
 
 
-
       /* stylisation de l'enregistrement du cycle menstruel */
-
 
 
    /*  PARAMETRES */
@@ -374,9 +582,7 @@ nav ul{
 }
 
 
-
            /* stylisation de la partie Rappel */
-
 
 
       /*  RAPPELS */
@@ -486,9 +692,7 @@ nav ul{
 }
 
 
-
         /* Stylisation de la structure santé */
-
 
 
       /*  SANTE GRILLE */
@@ -575,6 +779,296 @@ nav ul{
 .btn-sante-blanc:hover {
     border: 1px solid #94a3b8;
     transform: translateY(-2px);
+}
+
+
+           /* ci ce trouve les style de la responsive en fonction des ecrant */
+
+
+         /*  GRANDS ÉCRANS  (min-width: 1281px) */
+
+@media (min-width: 1281px) {
+
+    header {
+        padding: 10px 7%;
+    }
+
+    header img {
+        width: 160px;
+        height: 160px;
+    }
+
+    nav ul {
+        gap: 40px;
+        font-size: 1.1em;
+    }
+
+    .suivi {
+        padding: 4% 15%;
+    }
+
+    .suivi h1 {
+        font-size: 3em;
+    }
+
+    .onglets-suivi {
+        width: 55%;
+    }
+
+    .cards-suivi {
+        padding: 2% 12%;
+    }
+
+    .card-suivi {
+        width: 25%;
+    }
+
+    .calendrier,
+    .parametres,
+    .rappels,
+    .sante-grille {
+        margin: 2% 8%;
+        padding: 3% 4%;
+    }
+
+    .sante-grille {
+        padding: 2% 8%;
+    }
+}
+
+
+       /* PC PORTABLE  (769px - 1024px) */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul {
+        gap: 16px;
+        font-size: 0.95em;
+    }
+
+    .suivi h1 {
+        font-size: 2em;
+    }
+
+    .onglets-suivi {
+        width: 85%;
+    }
+
+    .cards-suivi {
+        padding: 3% 5%;
+        gap: 3%;
+    }
+
+    .card-suivi {
+        width: 32%;
+    }
+
+    .grille {
+        gap: 0.3em;
+    }
+
+    .cal-jour {
+        min-height: 60px;
+        font-size: 0.85em;
+    }
+
+    .sante-grille {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2% 4%;
+    }
+}
+
+
+       /* BURGER — Tablette + Mobile (max 768px) */
+
+@media (max-width: 768px) {
+
+    header img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .suivi {
+        padding: 6% 5%;
+    }
+
+    .suivi h1 {
+        font-size: 1.6em;
+    }
+
+    .suivi p {
+        font-size: 0.9em;
+    }
+
+    .onglets-suivi {
+        width: 100%;
+    }
+
+    .onglet-suivi {
+        font-size: 0.85em;
+        padding: 0.7em 0.4em;
+    }
+
+    .cards-suivi {
+        flex-direction: column;
+        align-items: center;
+        padding: 4% 5%;
+        gap: 14px;
+    }
+
+    .card-suivi {
+        width: 90%;
+    }
+
+    .calendrier,
+    .parametres,
+    .rappels {
+        margin: 3% 3%;
+        padding: 4%;
+    }
+
+    .grille {
+        gap: 0.3em;
+    }
+
+    .cal-jour {
+        min-height: 50px;
+        padding: 0.8em 0.2em;
+        font-size: 0.8em;
+        border-radius: 0.5em;
+    }
+
+    .legende {
+        flex-wrap: wrap;
+        gap: 0.8em;
+    }
+
+    .sante-grille {
+        grid-template-columns: 1fr;
+        padding: 3%;
+        gap: 1em;
+    }
+
+    .rappel-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8em;
+        padding: 4%;
+    }
+
+    .btn-supprimer {
+        align-self: flex-end;
+    }
+}
+
+
+       /* TABLETTE  (481px - 768px)*/
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    header {
+        padding: 10px 4%;
+    }
+
+    .cards-suivi {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-suivi {
+        width: 44%;
+    }
+
+    .sante-grille {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3% 4%;
+    }
+}
+
+
+        /* MOBILE  (320px - 480px) */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 8px 4%;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .suivi h1 {
+        font-size: 1.3em;
+    }
+
+    .badge-suivi {
+        font-size: 0.8em;
+    }
+
+    .onglet-suivi {
+        font-size: 0.78em;
+        padding: 0.6em 0.2em;
+        gap: 0.3em;
+    }
+
+    .cards-suivi {
+        padding: 4% 3%;
+    }
+
+    .card-suivi {
+        width: 100%;
+    }
+
+    .date {
+        font-size: 1.4em;
+    }
+
+    .calendrier,
+    .parametres,
+    .rappels {
+        margin: 3% 2%;
+        padding: 4% 3%;
+    }
+
+    .cal-jour {
+        min-height: 40px;
+        font-size: 0.72em;
+        border-radius: 0.4em;
+        padding: 0.5em 0.1em;
+    }
+
+    .jour-nom {
+        font-size: 0.75em;
+    }
+
+    .sante-grille {
+        grid-template-columns: 1fr;
+        padding: 3% 2%;
+        gap: 0.8em;
+    }
+
+    .rappels-entete {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-start;
+    }
+
+    .btn-ajouter {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 

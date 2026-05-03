@@ -1,3 +1,31 @@
+// SCRIPT BURGER MENU
+
+
+        const burgerBtn = document.getElementById('burgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function toggleMenu() {
+            burgerBtn.classList.toggle('actif');
+            mainNav.classList.toggle('ouvert');
+            navOverlay.classList.toggle('visible');
+            document.body.classList.toggle('menu-ouvert');
+        }
+
+        burgerBtn.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('ouvert')) toggleMenu();
+            });
+        });
+    
+
+
+
+    // Coullisage entre la partie docteur et patient
+
 document.addEventListener('DOMContentLoaded', function () {
 
     /* ELEMENTS */
