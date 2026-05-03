@@ -40,7 +40,7 @@ header img {
 nav ul {
     display: flex;
     align-items: center;
-    margin-top: 7%;
+    margin-top: 10%;
     gap: 30px;
     list-style: none;
     transform: translate(-5%);
@@ -50,7 +50,7 @@ nav ul {
 
 .yeo {
     background-color: orange;
-    padding: 80%;
+    padding: 50%;
     border-radius: 100%;
     font-weight: bold;
     color: white;
@@ -717,8 +717,8 @@ nav ul {
     }
 
     header img {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
     }
 
     nav ul {

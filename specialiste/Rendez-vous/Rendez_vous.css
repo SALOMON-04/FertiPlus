@@ -27,6 +27,10 @@ header a {
     color: black;
 }
 
+header a i {
+    color: #ff9500;
+}
+
 
 header a:hover {
     color: blue;
